@@ -1,0 +1,106 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Gilroy;
+    text-decoration: none;
+}
+
+.container_cart {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.sec1 {
+    margin-top: 30px;
+}
+
+.text {
+    line-height: 55px;
+}
+
+.text h1 {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.text a {
+    font-size: 18px;
+}
+
+.credit_cart {
+    margin-top: 30px;
+}
+
+.grid {
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    width: 245px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-weight: 500;
+    border-radius: 15px;
+    background: linear-gradient(84deg, #20BF55 2.27%, #01BAEF 92.26%);
+
+}
+
+.cart {
+    display: flex;
+    gap: 30px;
+}
+
+.grid_p {
+    line-height: 160px;
+}
+
+.credit_cart a {
+    line-height: 50px;
+}
+
+.sec2 {
+    margin-top: 60px;
+}
+
+tr {
+    display: flex;
+    gap: 105px;
+}
+
+.table_container h2 {
+    margin-bottom: 30px;
+}
+
+.cart_tr {
+    display: flex;
+    gap:186px;
+}
+
+.cart_th {
+    margin-top: 10px;
+}
+
+.teble {
+    margin-bottom: 20px;
+}
+
+.th {
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.th_date{
+    margin-left: -50px;
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.table a {
+    line-height: 110px;
+}
