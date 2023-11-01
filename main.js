@@ -26,7 +26,7 @@ let arr = [
 
 let container = document.querySelector('.cart')
 
-function reload(massiv, cart) {
+function reload_card(massiv, cart) {
     cart.innerHTML = ""
 
     for (let item of massiv) {
@@ -60,7 +60,8 @@ function reload(massiv, cart) {
     }
 }
 let tbody = document.querySelector('tbody')
-function relood(masiv, table) {
+
+function reload_table(masiv, table) {
     table.innerHTML = ""
     for (let item of masiv) {
         let tr = document.createElement('tr'),
@@ -90,8 +91,8 @@ function relood(masiv, table) {
         tr.append(th, th2, p_car, th3, date)
     }
 }
-reload(arr, container)
-relood(arr, tbody)
+reload_card(arr, container)
+reload_table(arr, tbody)
 
 
 // tr.classList.add('tr_reload')
