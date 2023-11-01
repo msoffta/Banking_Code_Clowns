@@ -2,6 +2,8 @@
 tr {
     display: flex;
     gap: 105px;
+    justify-content: space-between;
+   
 }
 
 .table_container h2 {
@@ -38,4 +40,15 @@ tr {
 }
 .table a {
     line-height: 110px;
+}
+
+.table{
+    margin-left: 10%;
+    width: 80%;
+}
+
+tbody tr {
+    border-bottom:1px solid #c4c4c4;
+    align-items: center;
+    padding: 10px 0px ;
 }

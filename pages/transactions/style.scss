@@ -19,6 +19,7 @@ header {
     position: absolute;
     left: 0;
     right: 0;
+    top: 0;
 
     background: #f0f0f0;
 
@@ -133,3 +134,22 @@ header {
         }
     }
 }
+
+.my_wallets_h1{
+    font-size: 48px;
+    margin-left: 10%;
+    margin-bottom: 0.5%;
+    margin-top: 10%;
+}
+
+.email_p{
+    font-size: 18px;
+    color:#0047FF;
+    margin-left: 10%;
+    margin-bottom: 2%;
+}
+
+table{
+    width: 100%;
+}
+
