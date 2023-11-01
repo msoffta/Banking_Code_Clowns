@@ -18,11 +18,23 @@ form input {
     height: 60px;
     width: 440px;
     border-radius: 10px;
-    border: 1px solid black;
+    border: 2px solid black;
     padding: 5px 10px;
     font-size: 18px;
     color: black;
+    outline: none;
+    
 }
+input:focus {
+    border-color: #0047FF;
+    outline: none;
+  }
+
+ /* .input-field {
+    border-color: red;
+  } */
+  
+
 form button {
     font-weight: 600;
     font-size: 20px;
