@@ -1,0 +1,41 @@
+
+tr {
+    display: flex;
+    gap: 105px;
+}
+
+.table_container h2 {
+    margin-bottom: 30px;
+}
+
+.cart_tr {
+    display: flex;
+    gap:186px;
+}
+
+.cart_th {
+    margin-top: 10px;
+}
+
+.teble {
+    margin-bottom: 20px;
+}
+
+.th {
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.th_date{
+    margin-left: -50px;
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.table a {
+    line-height: 110px;
+}
