@@ -1,3 +1,5 @@
+import { reload_card, makeHeader } from "../../modules/ui"
+
 let arr = [
     {
         id: 1,
@@ -59,5 +61,5 @@ let arr = [
 
 let container = document.querySelector('.cart')
 
-reload(arr, container)
-
+reload_card(arr, container)
+makeHeader()
