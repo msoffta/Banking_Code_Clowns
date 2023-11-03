@@ -52,8 +52,7 @@ form.onsubmit = (e) => {
                 "Content-Type": "application/json"
             }
         })
-
-        location.assign('/pages/sigin/index.html')
+   
     }
 
 

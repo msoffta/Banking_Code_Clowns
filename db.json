@@ -1,5 +1,13 @@
 {
-  "users": [],
+  "users": [
+    {
+      "name": "yura",
+      "email": "ibadovunus55@gmail.com",
+      "surname": "surname",
+      "password": "1234567",
+      "id": 1
+    }
+  ],
   "wallets": [],
   "transactions": []
 }
