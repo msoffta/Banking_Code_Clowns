@@ -1,20 +1,6 @@
+import axios from 'axios'
 let signupForm = document.forms.signup
 const baseUrl = "http://localhost:8080"
-async function sendData(url, user) {
-    let responce = await fetch(url, {
-        method: 'post',
-        body: JSON.stringify(user),
-        headers: {
-            "Content-Type": "application/json"
-        }
-    })
-
-    if (responce.ok) {
-        location.assign("/pages/signin/")
-    }
-
-    console.log(responce);
-}
 
 
 signupForm.onsubmit = function (e) {
@@ -27,8 +13,21 @@ signupForm.onsubmit = function (e) {
         password: data.get("password")
     }
 
-    sendData(`${baseUrl}/users`, user);
-    console.log(
-        "worked"
-    );
+
+    axios.get(baseUrl + "/users?email=" + user.email)
+        .then(res => {
+            if (res.status !== 200 && res.status !== 201) return
+            if (res.data.length > 0) {
+                alert('Account already has been taken')
+                return
+            }
+            axios.post(baseUrl + '/users', user)
+                .then(res => {
+                    if (res.status === 200 || res.status === 201) {
+                        alert('Account created')
+                        location.assign('/pages/signin/')
+                    }
+                })
+        })
+
 }

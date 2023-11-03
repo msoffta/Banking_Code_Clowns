@@ -1,11 +1,25 @@
 {
   "users": [
     {
-      "name": "Fozil",
-      "surname": "Muxsinov",
-      "email": "msoffta@gmail.com",
-      "password": "123456",
+      "name": "Daler",
+      "surname": "Sharifkulov",
+      "email": "dsarifkulo021@gmail.com",
+      "password": "1234Daler",
       "id": 1
+    },
+    {
+      "name": "Daler",
+      "surname": "Sharifkulov",
+      "email": "dsarifkulo021@gmail.com",
+      "password": "1234Daler",
+      "id": 2
+    },
+    {
+      "name": "Jaska",
+      "surname": "Jasurov",
+      "email": "jasur@gmail.com",
+      "password": "1234Jasur",
+      "id": 3
     }
   ],
   "wallets": [],
