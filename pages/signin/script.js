@@ -10,7 +10,7 @@ async function checkData(url, { email, password }) {
             return item.email === email && item.password === password;
         });
 
-        return result[0].id
+        return result[0]
     }
 }
 
@@ -23,5 +23,8 @@ signin.onsubmit = function (e) {
     };
 
     let userId = checkData(`${baseUrl}/users`, user);
-    localStorage.setItem("user", userId);
+    userId.then((user) => {
+        localStorage.setItem("user", JSON.stringify(user));
+        location.assign("/index.html");
+    });
 };
