@@ -60,7 +60,8 @@ function submit() {
         if (res.status === 200 || res.status === 201) {
             fetch(bas + "/users")
                 .then((res) => res.json())
-            btn = "/pages/sigin"
+                
+                location.assign('/pages/signin/')
         }
 
     })
