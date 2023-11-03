@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  
+  /* outline: none; */
   text-decoration: none;
 }
 form {
@@ -22,10 +22,13 @@ form input {
     padding: 5px 10px;
     font-size: 18px;
     color: black;
-        
+    outline: none;
     
 }
-
+input:focus {
+    border-color: #0047FF;
+    outline: none;
+  }
 
  /* .input-field {
     border-color: red;
@@ -58,6 +61,7 @@ a {
     font-weight: 700;
     font-size: 20px;
     color: #0047FF;
+
 }
 
 .red{
@@ -76,4 +80,5 @@ a {
     box-shadow: 0 0 15px rgb(173, 3, 3);
     
 }
+
 

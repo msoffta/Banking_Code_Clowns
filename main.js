@@ -1,11 +1,13 @@
-<<<<<<< Updated upstream
-console.log('ya avaz');
-=======
+
 import { reload_card, reload_table } from "./modules/ui"
 import { makeHeader } from "./modules/ui"
 
 
  
+
+
+
+
 let arr = [
     {
         id: 1,
@@ -39,4 +41,4 @@ let tbody = document.querySelector('tbody')
 makeHeader()
 reload_card(arr, container)
 reload_table(arr, tbody)
->>>>>>> Stashed changes
+
