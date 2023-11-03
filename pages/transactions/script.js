@@ -1,5 +1,4 @@
-import { reload_card, reload_table } from "./modules/ui"
-import { makeHeader } from "./modules/ui"
+import { makeHeader, reload_table } from "../../modules/ui";
 
 let arr = [
     {
@@ -27,10 +26,8 @@ let arr = [
     }
 ]
 
-let container = document.querySelector('.cart')
 let tbody = document.querySelector('tbody')
 
 
-makeHeader()
-reload_card(arr, container)
+makeHeader();
 reload_table(arr, tbody)
