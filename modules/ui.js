@@ -1,5 +1,4 @@
 export function reload_card(massiv, cart) {
-    cart.innerHTML = ""
 
     for (let item of massiv) {
         let article = document.createElement('article'),
@@ -65,6 +64,8 @@ export function reload_table(masiv, table) {
 }
 
 export function makeHeader() {
+    let locale = location.pathname.split('/').at(-2) || "home"
+
     let header = document.createElement("header");
     let wrap = document.createElement("div");
     let leftNav = document.createElement("nav");
@@ -81,6 +82,18 @@ export function makeHeader() {
     wrap.classList.add("wrap");
     leftNav.classList.add("left__nav");
     rightNav.classList.add("right__nav");
+
+    switch (locale) {
+        case "home":
+            main.classList.add('active_url')
+            break;
+        case "wallets":
+            myWallets.classList.add('active_url')
+            break;
+        case "transactions":
+            myTransactions.classList.add('active_url')
+            break;
+    }
 
     main.href = "/";
     main.innerHTML = "Главная";
