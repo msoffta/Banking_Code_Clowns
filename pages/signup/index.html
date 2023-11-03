@@ -9,14 +9,16 @@
 <body>
     <!-- <h1>Зарегистрироваться</h1> -->
 
+     <!-- <form action="/pages/signin/" method="post"> -->
      <form>
         <h1>Регистрация</h1>
-        <input type="email" placeholder="Почта">
-        <input type="text" placeholder="Имя">
-        <input type="text" placeholder="Фамилия">
-        <input type="password" placeholder="Пароль">
-        <button type="reset">Продолжить</button>
-        <a href="#">Войти в аккаунт</a>
+        <input type="email" name="email" placeholder="Почта">
+        <input type="text" name="name" placeholder="Имя">
+        <input type="text" name="name" placeholder="Фамилия">
+        <input type="password" name="password" placeholder="Пароль">
+        <!-- type="reset" -->
+        <button >Продолжить</button>
+        <a href="/pages/signin/">Войти в аккаунт</a>
      </form>
 
      <script src="script.js"></script>
