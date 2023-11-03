@@ -1,24 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- <h1>Зарегистрироваться</h1> -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sign Up</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- <h1>Зарегистрироваться</h1> -->
 
-     <form>
-        <h1>Регистрация</h1>
-        <input type="email" placeholder="Почта">
-        <input type="text" placeholder="Имя">
-        <input type="text" placeholder="Фамилия">
-        <input type="password" placeholder="Пароль">
-        <button type="reset">Продолжить</button>
-        <a href="/pages/signin/">Войти в аккаунт</a>
-     </form>
+        <form name="signup">
+            <h1>Регистрация</h1>
+            <input
+                pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                required
+                name="email"
+                id="email"
+                type="email"
+                placeholder="Почта"
+            />
+            <input
+                pattern="^[a-zA-Z\s]+$"
+                required
+                name="name"
+                id="name"
+                type="text"
+                placeholder="Имя"
+            />
+            <input
+                pattern="^[a-zA-Z\s]+$"
+                required
+                name="surname"
+                id="surname"
+                type="text"
+                placeholder="Фамилия"
+            />
+            <input
+                pattern="^.{6,}$"
+                required
+                name="password"
+                id="password"
+                type="password"
+                placeholder="Пароль"
+            />
+            <button type="submit">Продолжить</button>
+            <a href="/pages/signin/">Войти в аккаунт</a>
+        </form>
 
-     <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>
