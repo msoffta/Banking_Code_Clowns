@@ -1,0 +1,62 @@
+{
+  "users": [
+    {
+      "email": "jmukumzoda63@gmail.com",
+      "name": "jasur",
+      "surename": "dasds",
+      "password": "sadassa543543",
+      "id": 1
+    },
+    {
+      "email": "fgfg@gmail.com",
+      "name": "dasda",
+      "surename": "daa",
+      "password": "312scfdsf",
+      "id": 2
+    },
+    {
+      "email": "jmukumzoda63@gmail.com",
+      "name": "dasd",
+      "surename": "das",
+      "password": "dasds32432",
+      "id": 3
+    },
+    {
+      "email": "jmukumzoda63@gmail.com",
+      "name": "dsadsa",
+      "surename": "asdas",
+      "password": "324fdsfsd",
+      "id": 4
+    },
+    {
+      "email": "jmukumzoda63@gmail.com",
+      "name": "jasur",
+      "surename": "dasds",
+      "password": "sasaasd232",
+      "id": 5
+    },
+    {
+      "email": "jmukumzoda63@gmail.com",
+      "name": "jasur",
+      "surename": "dasds",
+      "password": "dsadasd3243",
+      "id": 6
+    },
+    {
+      "email": "jmukumzoda63@gmail.com",
+      "name": "jasur",
+      "surename": "dasds",
+      "password": "dsadasd3243",
+      "id": 7
+    },
+    {
+      "email": "jmukumzoda63@gmail.com",
+      "name": "jasur",
+      "surename": "addasd",
+      "password": "dads35345",
+      "id": 8
+    }
+  ],
+  "wallets": [],
+  "transactions": []
+}
