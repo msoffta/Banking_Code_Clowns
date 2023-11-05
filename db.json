@@ -50,6 +50,13 @@
       "balance": "125000",
       "userId": 4,
       "id": 3
+    },
+    {
+      "name": "CARD",
+      "currency": "usd",
+      "balance": "125000",
+      "userId": 4,
+      "id": 4
     }
   ],
   "transactions": []
