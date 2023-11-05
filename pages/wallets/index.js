@@ -1,65 +1,23 @@
-import { reload_card, makeHeader } from "../../modules/ui"
+import axios from "axios";
+import { reload_card, makeHeader } from "../../modules/ui";
+const baseUrl = "http://localhost:8080";
+makeHeader();
 
-let arr = [
-    {
-        id: 1,
-        cart_name: "Visa",
-        cart_amount: "Rub",
-        cart_Category: "Car",
-        cart_Transaction_amount: "414,000,000",
-        cart_time: "4 days ago",
-    },
-    {
-        id: 2,
-        cart_name: "Visa",
-        cart_amount: "Rub",
-        cart_Category: "Car",
-        cart_Transaction_amount: "414,000,000",
-        cart_time: "4 days ago",
-    }, {
-        id: 3,
-        cart_name: "Visa",
-        cart_amount: "Rub",
-        cart_Category: "Car",
-        cart_Transaction_amount: "414,000,000",
-        cart_time: "4 days ago",
-    },
-    {
-        id: 4,
-        cart_name: "Visa",
-        cart_amount: "Rub",
-        cart_Category: "Car",
-        cart_Transaction_amount: "414,000,000",
-        cart_time: "4 days ago",
-    },
-    {
-        id: 5,
-        cart_name: "Visa",
-        cart_amount: "Rub",
-        cart_Category: "Car",
-        cart_Transaction_amount: "414,000,000",
-        cart_time: "4 days ago",
-    },
-    {
-        id: 6,
-        cart_name: "Visa",
-        cart_amount: "Rub",
-        cart_Category: "Car",
-        cart_Transaction_amount: "414,000,000",
-        cart_time: "4 days ago",
-    },
-    {
-        id: 7,
-        cart_name: "Visa",
-        cart_amount: "Rub",
-        cart_Category: "Car",
-        cart_Transaction_amount: "414,000,000",
-        cart_time: "4 days ago",
-    },
-    
-]
+let container = document.querySelector(".cart");
+let addWallet = document.querySelector(".button");
 
-let container = document.querySelector('.cart')
+async function getData() {
+    const user = localStorage.getItem("user");
+    const responce = axios.get(
+        baseUrl + `/wallets?userId=${JSON.parse(user).id}`
+    );
+    if ((await responce).status === 200 || (await responce).status === 201) {
+        reload_card((await responce).data, container);
+    }
+}
 
-reload_card(arr, container)
-makeHeader()
+getData();
+
+addWallet.onclick = () => {
+    location.assign("/pages/addwallet/");
+};

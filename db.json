@@ -20,8 +20,37 @@
       "email": "jasur@gmail.com",
       "password": "1234Jasur",
       "id": 3
+    },
+    {
+      "name": "Fozil",
+      "surname": "Muxsinov",
+      "email": "msoffta@gmail.com",
+      "password": "123456",
+      "id": 4
     }
   ],
-  "wallets": [],
+  "wallets": [
+    {
+      "name": "d",
+      "currency": "usd",
+      "balance": "12000",
+      "userId": 4,
+      "id": 1
+    },
+    {
+      "name": "Visa",
+      "currency": "usd",
+      "balance": "1200056",
+      "userId": 4,
+      "id": 2
+    },
+    {
+      "name": "Humo",
+      "currency": "uzs",
+      "balance": "125000",
+      "userId": 4,
+      "id": 3
+    }
+  ],
   "transactions": []
 }
