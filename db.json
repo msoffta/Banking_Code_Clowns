@@ -1,11 +1,32 @@
 {
   "users": [
     {
-      "name": "yura",
-      "email": "ibadovunus55@gmail.com",
-      "surname": "surname",
-      "password": "1234567",
+      "name": "Daler",
+      "surname": "Sharifkulov",
+      "email": "dsarifkulo021@gmail.com",
+      "password": "1234Daler",
       "id": 1
+    },
+    {
+      "name": "Daler",
+      "surname": "Sharifkulov",
+      "email": "dsarifkulo021@gmail.com",
+      "password": "1234Daler",
+      "id": 2
+    },
+    {
+      "name": "Jaska",
+      "surname": "Jasurov",
+      "email": "jasur@gmail.com",
+      "password": "1234Jasur",
+      "id": 3
+    },
+    {
+      "name": "yura",
+      "surname": "surname",
+      "email": "ibadovunus55@gmail.com",
+      "password": "1234567",
+      "id": 4
     }
   ],
   "wallets": [],

@@ -59,6 +59,8 @@ let arr = [
     
 ]
 
+
+
 let container = document.querySelector('.cart')
 
 reload_card(arr, container)

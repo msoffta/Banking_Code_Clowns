@@ -1,33 +1,34 @@
-let email = document.querySelector('#email')
-let password = document.querySelector('#password')
-let form = document.querySelector('form')
-let inputs = document.querySelectorAll('form input')
+import axios from "axios";
 
-const bus = "http://localhost:8080"
+const signin = document.forms.signin;
+const baseUrl = "http://localhost:8080";
+
+signin.onsubmit = function (e) {
+    e.preventDefault();
+    let data = new FormData(signin);
 
 
+    let user = {
+        email: data.get("email"),
+        password: data.get("password"),
+    };
 
+    axios.get(baseUrl + "/users?email=" + user.email)
+        .then(res => {
+            if(res.status === 200 || res.status === 201){
+                if(res.data[0].password === user.password) {
+                    alert('welcome')
+                    localStorage.setItem('user' , 'res')
+                    location.assign('/index.html')
 
-
-function matches(arr) {
-
-    form.onsubmit = (e) => {
-        e.preventDefault()
-        
-        arr.filter(item => {
-            if (item.email === email.value && item.password === password.value) {
-
-                console.log("avaz");
-                location.assign('/index.html')
-
-                localStorage.setItem('user', JSON.stringify(item))
-                
+                    
+                    return
+                } else {
+                    alert('error')
+                }
             }
+            
         })
 
-    }
-}
 
-fetch(bus + "/users")
-    .then((res) => res.json())
-    .then((res) => matches(res))
+};
