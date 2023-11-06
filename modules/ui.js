@@ -3,6 +3,7 @@ import { getRandomColor } from "./util";
 export function reload_card(massiv, cart) {
     for (let item of massiv) {
         let article = document.createElement("article"),
+            h4 = document.createElement("h4"),
             h3 = document.createElement("h3"),
             p = document.createElement("p");
 
@@ -14,10 +15,11 @@ export function reload_card(massiv, cart) {
         p.classList.add("grid_p");
 
         h3.innerHTML = item.name;
+        h4.innerHTML = item.currency
         p.innerHTML = `Баланс: ${item.balance}`;
 
         cart.append(article);
-        article.append(h3, p);
+        article.append(h3, h4, p);
     }
 }
 
