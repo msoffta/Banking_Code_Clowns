@@ -20,7 +20,7 @@
     height: 150px;
     display: flex;
     flex-direction: column;
-    gap: 70px;
+    gap: 20px;
     overflow: hidden;
     font-weight: 500;
     border-radius: 15px;
