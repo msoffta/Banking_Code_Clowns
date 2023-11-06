@@ -1,5 +1,19 @@
 {
-  "users": [],
-  "wallets": [],
+  "users": [
+    {
+      "name": "Daler",
+      "surname": "Sharifkulov",
+      "email": "dsarifkulo021@gmail.com",
+      "password": "1234Daler",
+      "id": 1
+    }
+  ],
+  "wallets": [
+    {
+      "id": 10,
+      "cart_name": "dasdasd",
+      "cart_amount": "12200"
+    }
+  ],
   "transactions": []
 }
