@@ -33,7 +33,10 @@ input:focus {
  /* .input-field {
     border-color: red;
   } */
-  
+
+input:invalid {
+    border-color: red;
+}
 
 form button {
     font-weight: 600;

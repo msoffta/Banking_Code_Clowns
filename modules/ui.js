@@ -1,5 +1,5 @@
-export function reload_card(massiv, cart) {
-
+export function reload_card(massiv,place) {
+    place.innerHTML = ""
     for (let item of massiv) {
         let article = document.createElement('article'),
             h3 = document.createElement('h3'),
@@ -7,13 +7,13 @@ export function reload_card(massiv, cart) {
 
 
         article.classList.add('grid')
-        if (item.id == 1) {
+        if (item.id >= 1 && item.id <= 5) {
             article.classList.add('cart_grid')
         }
-        if (item.id === 2) {
+        if (item.id >= 5 && item.id <= 10) {
             article.style.background = " linear-gradient(84deg, #5F0A87 2.27%, #A4508B 92.26%)"
         }
-        if (item.id === 3) {
+        if (item.id >=10 && item.id <= 15 ) {
             article.style.background = " linear-gradient(84deg, #D7816A 2.27%, #BD4F6C 92.26%)"
         }
 
@@ -25,7 +25,7 @@ export function reload_card(massiv, cart) {
 
 
 
-        cart.append(article)
+        place.append(article)
         article.append(h3, p)
 
     }
@@ -157,3 +157,4 @@ export function makeHeader() {
         buttons.append(leave, noLeave);
     };
 }
+

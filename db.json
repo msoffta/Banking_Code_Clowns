@@ -1,13 +1,5 @@
 {
-  "users": [
-    {
-      "email": "jmukumzoda63@gmail.com",
-      "name": "sdas",
-      "surename": "dasdas",
-      "password": "dasd343",
-      "id": 1
-    }
-  ],
+  "users": [],
   "wallets": [],
   "transactions": []
 }
