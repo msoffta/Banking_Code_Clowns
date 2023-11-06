@@ -29,6 +29,22 @@
       "id": 4
     }
   ],
-  "wallets": [],
+  "wallets": [
+    {
+      "name": "yura",
+      "current": "rub",
+      "id": 9
+    },
+    {
+      "name": "visa",
+      "current": null,
+      "id": 10
+    },
+    {
+      "name": "yura",
+      "current": null,
+      "id": 11
+    }
+  ],
   "transactions": []
 }

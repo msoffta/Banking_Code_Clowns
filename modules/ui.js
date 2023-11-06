@@ -1,5 +1,7 @@
 export function reload_card(massiv, cart) {
 
+    
+
     for (let item of massiv) {
         let article = document.createElement('article'),
             h3 = document.createElement('h3'),

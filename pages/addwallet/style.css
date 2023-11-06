@@ -5,7 +5,7 @@
     /* outline: none; */
     text-decoration: none;
   }
-  form {
+  .add {
       display: flex;
       justify-content: center;
       flex-direction: column;
@@ -14,7 +14,7 @@
       padding:0 0  50px ;
   
   }
-  form input {
+  .add input {
       height: 60px;
       width: 440px;
       border-radius: 10px;
@@ -23,7 +23,7 @@
       font-size: 18px;
       color: black;
   }
-  form button {
+  .add button {
       font-weight: 600;
       font-size: 20px;
       color: white;
