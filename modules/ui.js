@@ -16,7 +16,7 @@ export function reload_card(massiv, cart) {
 
         h3.innerHTML = item.name;
         h4.innerHTML = item.currency
-        p.innerHTML = `Баланс: ${item.balance}`;
+        p.innerHTML = `${item.balance}`;
 
         cart.append(article);
         article.append(h3, h4, p);
