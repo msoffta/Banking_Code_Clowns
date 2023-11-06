@@ -25,6 +25,7 @@ open.onclick = () => {
 
 
 form.onsubmit = (e) => {
+    e.preventDefault();
     
     form.style.display = "none"
 
