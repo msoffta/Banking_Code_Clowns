@@ -31,32 +31,11 @@
   ],
   "wallets": [
     {
-      "name": "d",
+      "name": "Humo",
       "currency": "usd",
-      "balance": "12000",
+      "balance": "456454",
       "userId": 4,
       "id": 1
-    },
-    {
-      "name": "Visa",
-      "currency": "usd",
-      "balance": "1200056",
-      "userId": 4,
-      "id": 2
-    },
-    {
-      "name": "Humo",
-      "currency": "uzs",
-      "balance": "125000",
-      "userId": 4,
-      "id": 3
-    },
-    {
-      "name": "CARD",
-      "currency": "usd",
-      "balance": "125000",
-      "userId": 4,
-      "id": 4
     }
   ],
   "transactions": []

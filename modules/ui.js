@@ -14,7 +14,7 @@ export function reload_card(massiv, cart) {
         p.classList.add("grid_p");
 
         h3.innerHTML = item.name;
-        p.innerHTML = item.balance;
+        p.innerHTML = `Баланс: ${item.balance}`;
 
         cart.append(article);
         article.append(h3, p);

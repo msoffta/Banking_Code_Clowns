@@ -1,5 +1,6 @@
 import { reload_card, reload_table } from "./modules/ui"
 import { makeHeader } from "./modules/ui"
+import { getData } from "./modules/util"
 
 let arr = [
     {
@@ -29,8 +30,8 @@ let arr = [
 
 let container = document.querySelector('.cart')
 let tbody = document.querySelector('tbody')
-
+const baseUrl = "http://localhost:8080"
 
 makeHeader()
-reload_card(arr, container)
+getData(baseUrl, container)
 reload_table(arr, tbody)
