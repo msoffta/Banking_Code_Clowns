@@ -1,36 +1,17 @@
 import { reload_card, reload_table } from "./modules/ui"
 import { makeHeader } from "./modules/ui"
-
-let arr = [
-    {
-        id: 1,
-        cart_name: "Visa",
-        cart_amount: "Rub",
-        cart_Category: "Car",
-        cart_Transaction_amount: "414,000,000",
-        cart_time: "4 days ago",
-    },
-    {
-        id: 2,
-        cart_name: "Visa",
-        cart_amount: "Rub",
-        cart_Category: "Car",
-        cart_Transaction_amount: "414,000,000",
-        cart_time: "4 days ago",
-    }, {
-        id: 3,
-        cart_name: "Visa",
-        cart_amount: "Rub",
-        cart_Category: "Car",
-        cart_Transaction_amount: "414,000,000",
-        cart_time: "4 days ago",
-    }
-]
+import { user } from "./modules/user"
+import { getData } from "./modules/helpers"
 
 let container = document.querySelector('.cart')
 let tbody = document.querySelector('tbody')
 
+getData('/wallets?user_id=' + user.id)
+    .then(res => reload_card(res.data, container))
+
+
+
 
 makeHeader()
-reload_card(arr, container)
-reload_table(arr, tbody)
+// reload_card(arr, container)
+// reload_table(arr, tbody)

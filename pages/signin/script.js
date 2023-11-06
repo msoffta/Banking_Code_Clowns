@@ -29,7 +29,7 @@ signin.onsubmit = (e) => {
         if(res.status === 200 || res.status === 201){
             if(res.data[0].password === user.password) {
                 alert('welcome')
-                localStorage.setItem('user' , JSON.stringify(res.data))
+                localStorage.setItem('user' , JSON.stringify(res.data[0]))
                 location.assign('/index.html')
 
             } else {

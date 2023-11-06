@@ -66,29 +66,28 @@
   ],
   "wallets": [
     {
-      "name": "alex",
-      "currency": "rub",
-      "balance": "3000",
+      "name": "Visa",
+      "currency": "BTC",
+      "balance": "2",
+      "user_id": 3,
       "id": 1
     },
     {
-      "name": "alex",
-      "currency": "rub",
-      "balance": "3000",
+      "name": "Mastercard",
+      "currency": "UZS",
+      "balance": 96000,
+      "user_id": 1,
       "id": 2
-    },
-    {
-      "name": "fd",
-      "currency": "euro",
-      "balance": "1000",
-      "id": 3
-    },
-    {
-      "name": "Sheeryl",
-      "currency": "3423",
-      "balance": "45678",
-      "id": 4
     }
   ],
-  "transactions": []
+  "transactions": [
+    {
+      "id": 1,
+      "user_id": 2,
+      "wallet_id": 2,
+      "total": 4000,
+      "category": "food",
+      "date": "2023-11-06"
+    }
+  ]
 }
