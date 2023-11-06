@@ -20,8 +20,75 @@
       "email": "jasur@gmail.com",
       "password": "1234Jasur",
       "id": 3
+    },
+    {
+      "name": "fsd",
+      "surname": "dasdas",
+      "email": "Sheryl022604@gmail.com",
+      "password": "das323212312fds",
+      "id": 4
+    },
+    {
+      "name": "d",
+      "surname": "d",
+      "email": "Sheryl02204@gmail.com",
+      "password": "da3423fc",
+      "id": 5
+    },
+    {
+      "name": "qswdevb",
+      "surname": "das",
+      "email": "alexlee457d@gmail.com",
+      "password": "ds3fwe",
+      "id": 6
+    },
+    {
+      "name": "wesr",
+      "surname": "rwee",
+      "email": "dsarifkulo023232re1@gmail.com",
+      "password": "423dscfr3w",
+      "id": 7
+    },
+    {
+      "name": "aszx",
+      "surname": "asdf",
+      "email": "fzsihdlfd@gmail.com",
+      "password": "djwgz37",
+      "id": 8
+    },
+    {
+      "name": "das",
+      "surname": "das",
+      "email": "dsarifdcszxfkulo021@gmail.com",
+      "password": "das2e2qw",
+      "id": 9
     }
   ],
-  "wallets": [],
+  "wallets": [
+    {
+      "name": "alex",
+      "currency": "rub",
+      "balance": "3000",
+      "id": 1
+    },
+    {
+      "name": "alex",
+      "currency": "rub",
+      "balance": "3000",
+      "id": 2
+    },
+    {
+      "name": "fd",
+      "currency": "euro",
+      "balance": "1000",
+      "id": 3
+    },
+    {
+      "name": "Sheeryl",
+      "currency": "3423",
+      "balance": "45678",
+      "id": 4
+    }
+  ],
   "transactions": []
 }
