@@ -16,12 +16,12 @@ signin.onsubmit = function (e) {
         .then(res => {
             if (res.status === 200 || res.status === 201) {
                 if (res.data.password=== user.password) {
-                    alert("Вы вошли");
+                    alert("all right");
                     localStorage.setItem("user", JSON.stringify(res));
                     location.assign("/index.html")
                     return
                 } else {
-                    alert("Неверный пароль!");
+                    alert("fault password");
                   }
             }
         })
