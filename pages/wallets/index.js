@@ -1,16 +1,10 @@
-import axios from "axios";
-import { reload_card, makeHeader } from "../../modules/ui";
-import { getData } from "../../modules/util";
-const baseUrl = "http://localhost:8080";
-makeHeader();
+import { reload_card, makeHeader } from "../../modules/ui"
+import { getData } from '../../modules/helpers';
+import { user } from "../../modules/user";
 
-let container = document.querySelector(".cart");
-let addWallet = document.querySelector(".button");
+let container = document.querySelector('.cart')
 
+makeHeader()
 
-
-getData(baseUrl, container);
-
-addWallet.onclick = () => {
-    location.assign("/pages/addwallet/");
-};
+getData('/wallets?user_id=' + user.id)
+    .then(res => reload_card(res.data, container))

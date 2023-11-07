@@ -23,6 +23,10 @@
       font-size: 18px;
       color: black;
   }
+  input:focus {
+    border-color: #0047FF;
+    outline: none;
+  }
   form button {
       font-weight: 600;
       font-size: 20px;

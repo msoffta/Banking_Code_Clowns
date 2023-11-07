@@ -1,7 +1,5 @@
-import axios from 'axios'
+import { getData, postData } from '../../modules/helpers';
 let signupForm = document.forms.signup
-const baseUrl = "http://localhost:8080"
-
 
 signupForm.onsubmit = function (e) {
     e.preventDefault();
@@ -14,14 +12,14 @@ signupForm.onsubmit = function (e) {
     }
 
 
-    axios.get(baseUrl + "/users?email=" + user.email)
+    getData("/users?email=" + user.email)
         .then(res => {
             if (res.status !== 200 && res.status !== 201) return
             if (res.data.length > 0) {
                 alert('Account already has been taken')
                 return
             }
-            axios.post(baseUrl + '/users', user)
+            postData('/users', user)
                 .then(res => {
                     if (res.status === 200 || res.status === 201) {
                         alert('Account created')

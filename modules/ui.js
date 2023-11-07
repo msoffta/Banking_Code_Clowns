@@ -2,24 +2,38 @@ import { getRandomColor } from "./util";
 
 export function reload_card(massiv, cart) {
     for (let item of massiv) {
-        let article = document.createElement("article"),
-            h4 = document.createElement("h4"),
-            h3 = document.createElement("h3"),
-            p = document.createElement("p");
+        let article = document.createElement('article'),
+            h3 = document.createElement('h3'),
+            h4 = document.createElement('h4'),
+            p = document.createElement('p');
 
-        article.classList.add("grid");
-        /* background: linear-gradient(84deg, #20BF55 2.27%, #01BAEF 92.26%); */
 
-        article.style.background = `linear-gradient(84deg, ${getRandomColor()} 2.27%, ${getRandomColor()} 92.26%)`;
+        article.classList.add('grid')
+        if (item.id == 1) {
+            article.classList.add('cart_grid')
+        }
+        if (item.id === 2) {
+            article.style.background = " linear-gradient(84deg, #5F0A87 2.27%, #A4508B 92.26%)"
+        }
+        if (item.id === 3) {
+            article.style.background = " linear-gradient(84deg, #D7816A 2.27%, #BD4F6C 92.26%)"
+        }
 
-        p.classList.add("grid_p");
+        p.classList.add('grid_p')
 
-        h3.innerHTML = item.name;
+        h3.innerHTML = item.name
         h4.innerHTML = item.currency
-        p.innerHTML = `${item.balance}`;
+        p.innerHTML = `Balance: ${item.balance}`
 
-        cart.append(article);
-        article.append(h3, h4, p);
+
+        
+
+
+
+
+        cart.append(article)
+        article.append(h3,h4, p)
+
     }
 }
 
