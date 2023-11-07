@@ -1,5 +1,5 @@
-// let user = localStorage.getItem('user')
+let user = localStorage.getItem('user')
 
-// if(!user) {
-//     location.assign('/pages/signin/')
-// }
+if(!user) {
+    location.assign('/pages/signin/')
+}
