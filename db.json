@@ -78,6 +78,20 @@
       "balance": 96000,
       "user_id": 1,
       "id": 2
+    },
+    {
+      "name": "Fozil",
+      "currency": "usd",
+      "balance": 1184411,
+      "user_id": 4,
+      "id": 3
+    },
+    {
+      "name": "HYMO",
+      "currency": "usd",
+      "balance": 1000,
+      "user_id": 4,
+      "id": 4
     }
   ],
   "transactions": [
@@ -88,6 +102,22 @@
       "total": 4000,
       "category": "food",
       "date": "2023-11-06"
+    },
+    {
+      "user_id": 4,
+      "wallet_id": 4,
+      "total": 11000,
+      "category": "entertainment",
+      "date": "2023-11-07",
+      "id": 2
+    },
+    {
+      "user_id": 4,
+      "wallet_id": 3,
+      "total": 15645,
+      "category": "food",
+      "date": "2023-11-07",
+      "id": 3
     }
   ]
 }

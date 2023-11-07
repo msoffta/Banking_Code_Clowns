@@ -1,4 +1,5 @@
-import { getRandomColor } from "./util";
+import { getData, getRandomColor } from "./helpers";
+import { user } from "./user";
 
 export function reload_card(massiv, cart) {
     for (let item of massiv) {
@@ -37,9 +38,17 @@ export function reload_card(massiv, cart) {
     }
 }
 
-export function reload_table(masiv, table) {
+const categories = {
+    food: "Еда",
+    entertainment: "Развлечения",
+    health: "Здоровье",
+    other: "Другое",
+};
+
+export async function reload_table(masiv, table) {
     table.innerHTML = "";
     for (let item of masiv) {
+        const responce = await getData("/wallets/" + item.wallet_id)
         let tr = document.createElement("tr"),
             th = document.createElement("th"),
             th2 = document.createElement("th"),
@@ -51,10 +60,10 @@ export function reload_table(masiv, table) {
         th.classList.add("cart_th");
 
         th.innerHTML = item.id;
-        th2.innerHTML = item.cart_name;
-        th3.innerHTML = item.cart_amount;
-        p_car.innerHTML = item.cart_Transaction_amount;
-        date.innerHTML = item.cart_time;
+        th2.innerHTML = responce.data.name;
+        p_car.innerHTML = categories[item.category];
+        th3.innerHTML = item.total;
+        date.innerHTML = item.date;
         th.classList.add("th");
         date.classList.add("th_date");
         th2.classList.add("th");
@@ -146,8 +155,8 @@ export function makeHeader() {
         noLeave.innerHTML = "Нет";
 
         leave.onclick = function () {
-            modal.remove();
-            backdrop.remove();
+            localStorage.clear();
+            location.reload();
         };
 
         noLeave.onclick = function () {
