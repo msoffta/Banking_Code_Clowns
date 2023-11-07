@@ -1,5 +1,99 @@
 {
+<<<<<<< HEAD
   "users": [] ,
   "wallets": [ ],
   "transactions": []
+=======
+  "users": [
+    {
+      "name": "Daler",
+      "surname": "Sharifkulov",
+      "email": "dsarifkulo021@gmail.com",
+      "password": "1234Daler",
+      "id": 1
+    },
+    {
+      "name": "Daler",
+      "surname": "Sharifkulov",
+      "email": "dsarifkulo021@gmail.com",
+      "password": "1234Daler",
+      "id": 2
+    },
+    {
+      "name": "Jaska",
+      "surname": "Jasurov",
+      "email": "jasur@gmail.com",
+      "password": "1234Jasur",
+      "id": 3
+    },
+    {
+      "name": "fsd",
+      "surname": "dasdas",
+      "email": "Sheryl022604@gmail.com",
+      "password": "das323212312fds",
+      "id": 4
+    },
+    {
+      "name": "d",
+      "surname": "d",
+      "email": "Sheryl02204@gmail.com",
+      "password": "da3423fc",
+      "id": 5
+    },
+    {
+      "name": "qswdevb",
+      "surname": "das",
+      "email": "alexlee457d@gmail.com",
+      "password": "ds3fwe",
+      "id": 6
+    },
+    {
+      "name": "wesr",
+      "surname": "rwee",
+      "email": "dsarifkulo023232re1@gmail.com",
+      "password": "423dscfr3w",
+      "id": 7
+    },
+    {
+      "name": "aszx",
+      "surname": "asdf",
+      "email": "fzsihdlfd@gmail.com",
+      "password": "djwgz37",
+      "id": 8
+    },
+    {
+      "name": "das",
+      "surname": "das",
+      "email": "dsarifdcszxfkulo021@gmail.com",
+      "password": "das2e2qw",
+      "id": 9
+    }
+  ],
+  "wallets": [
+    {
+      "name": "Visa",
+      "currency": "BTC",
+      "balance": "2",
+      "user_id": 3,
+      "id": 1
+    },
+    {
+      "name": "Mastercard",
+      "currency": "UZS",
+      "balance": 96000,
+      "user_id": 1,
+      "id": 2
+    }
+  ],
+  "transactions": [
+    {
+      "id": 1,
+      "user_id": 2,
+      "wallet_id": 2,
+      "total": 4000,
+      "category": "food",
+      "date": "2023-11-06"
+    }
+  ]
+>>>>>>> 52fbba2a143d45c91c63e623292df175a7a7d1c2
 }

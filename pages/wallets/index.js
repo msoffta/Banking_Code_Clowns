@@ -1,5 +1,6 @@
 // import axios from 'axios'
 import { reload_card, makeHeader } from "../../modules/ui"
+<<<<<<< HEAD
 
 let arr = [
     {
@@ -57,6 +58,10 @@ let arr = [
         cart_Transaction_amount: "414,000,000",
         cart_time: "4 days ago",
     }
+=======
+import { getData } from '../../modules/helpers';
+import { user } from "../../modules/user";
+>>>>>>> 52fbba2a143d45c91c63e623292df175a7a7d1c2
 
 ]
 let container = document.querySelector('.cart')
@@ -111,6 +116,12 @@ form.onsubmit = (e) => {
     })
 }
 
+<<<<<<< HEAD
 reload_card(arr, container)
 
+=======
+>>>>>>> 52fbba2a143d45c91c63e623292df175a7a7d1c2
 makeHeader()
+
+getData('/wallets?user_id=' + user.id)
+    .then(res => reload_card(res.data, container))

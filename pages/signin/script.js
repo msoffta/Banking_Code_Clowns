@@ -1,17 +1,36 @@
 import axios from 'axios'
 
+<<<<<<< HEAD
 const signin = document.forms.signin;
 
 const baseUrl = "http://localhost:8080";
 
+=======
+let signin = document.forms.signin;
+const baseUrl = "http://localhost:8080";
 
-signin.onsubmit = function (e) {
+// async function checkData(url, { email, password }) {
+//     const responce = await fetch(url);
+
+//     if (responce.ok) {
+//         let data = await responce.json();
+//         let result = data.filter((item) => {
+//             return item.email === email && item.password === password;
+//         });
+
+//         return result[0]
+//     }
+// }
+>>>>>>> 52fbba2a143d45c91c63e623292df175a7a7d1c2
+
+signin.onsubmit = (e) => {
     e.preventDefault();
     let data = new FormData(signin);
     let user = {
         email: data.get("email"),
         password: data.get("password"),
     };
+<<<<<<< HEAD
     axios.get(baseUrl + "/users?email=" + user.email)
         .then(res => {
             if (res.status === 200 || res.status === 201) {
@@ -26,3 +45,23 @@ signin.onsubmit = function (e) {
             }
         })
 }
+=======
+
+    axios.get(baseUrl + "/users?email=" + user.email)
+    .then(res => {
+        if(res.status === 200 || res.status === 201){
+            if(res.data[0].password === user.password) {
+                alert('welcome')
+                localStorage.setItem('user' , JSON.stringify(res.data[0]))
+                location.assign('/index.html')
+
+            } else {
+                alert('error')
+            }
+        }
+        
+    })
+
+
+};
+>>>>>>> 52fbba2a143d45c91c63e623292df175a7a7d1c2

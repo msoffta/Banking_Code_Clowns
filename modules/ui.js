@@ -3,6 +3,7 @@ export function reload_card(massiv,place) {
     for (let item of massiv) {
         let article = document.createElement('article'),
             h3 = document.createElement('h3'),
+            h4 = document.createElement('h4'),
             p = document.createElement('p');
 
 
@@ -19,14 +20,18 @@ export function reload_card(massiv,place) {
 
         p.classList.add('grid_p')
 
-        h3.innerHTML = item.cart_name
-        p.innerHTML = item.cart_amount
+        h3.innerHTML = item.name
+        h4.innerHTML = item.currency
+        p.innerHTML = `Balance: ${item.balance}`
+
+
+        
 
 
 
 
-        place.append(article)
-        article.append(h3, p)
+        cart.append(article)
+        article.append(h3,h4, p)
 
     }
 }
