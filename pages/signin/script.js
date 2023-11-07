@@ -15,9 +15,9 @@ signin.onsubmit = function (e) {
     axios.get(baseUrl + "/users?email=" + user.email)
         .then(res => {
             if (res.status === 200 || res.status === 201) {
-                if (res.data[0].password === user.password) {
+                if (res.data[0].password=== user.password) {
                     alert("all right");
-                    localStorage.setItem("user", JSON.stringify(res));
+                    localStorage.setItem("user", JSON.stringify(res.data[0]));
                     location.assign("/index.html")
                     return
                 } else {
