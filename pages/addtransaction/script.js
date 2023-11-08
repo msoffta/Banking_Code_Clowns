@@ -37,8 +37,13 @@ async function transactionValidate(data) {
             responce.status !== 304
         )
             return;
+        if (/^\d+$/.test(data.get("amount"))) {
+            
+        } else {
+            return alert("Некорректная сумма");
+        }
         let resData = await responce.data[0];
-
+        
         
         if (+data.get("amount") > +resData.balance) {
             alert("Недостаточно средств");
