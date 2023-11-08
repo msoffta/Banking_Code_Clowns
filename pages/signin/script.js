@@ -18,13 +18,17 @@ signin.onsubmit = (e) => {
     axios.get(baseUrl + "/users?email=" + user.email)
     .then(res => {
         if(res.status === 200 || res.status === 201){
-            if(res.data[0].password === user.password) {
-                alert('welcome')
-                localStorage.setItem('user' , JSON.stringify(res.data[0]))
-                location.assign('/index.html')
-
+            if(res.data.length > 0) {
+                if(res.data[0].password === user.password) {
+                    alert('welcome')
+                    localStorage.setItem('user' , JSON.stringify(res.data[0]))
+                    location.assign('/index.html')
+    
+                } else {
+                    alert('error')
+                }
             } else {
-                alert('error')
+                alert('no user found')
             }
         }
         

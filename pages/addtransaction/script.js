@@ -30,7 +30,7 @@ addtransaction.onsubmit = (e) => {
                         }
 
                     })
-                    patchData("/wallets?wallet_id=" + user.id, {
+                    patchData("/wallets/" + user.id, {
                         balance: res.data[0].balance - transactions.sum
                     })
                         .then(res => console.log(res))

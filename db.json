@@ -1,5 +1,37 @@
 {
-  "users": [],
-  "wallets": [],
-  "transactions": []
+  "users": [
+    {
+      "name": "Daler",
+      "surname": "Sharifkulov",
+      "email": "dsarifkulo021@gmail.com",
+      "password": "1234Daler",
+      "id": 1
+    }
+  ],
+  "wallets": [
+    {
+      "name": "Visa",
+      "currency": "BTC",
+      "balance": 10,
+      "user_id": 1,
+      "id": 1
+    },
+    {
+      "name": "HUMO",
+      "currency": "USD",
+      "balance": 100000,
+      "user_id": 1,
+      "id": 2
+    }
+  ],
+  "transactions": [
+    {
+      "wallet_name": "Visa",
+      "wallet_id": 1,
+      "sum": 2,
+      "category": "car",
+      "date": "2023-11-08",
+      "id": 1
+    }
+  ]
 }
