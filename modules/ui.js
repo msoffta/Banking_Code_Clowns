@@ -62,7 +62,7 @@ export async function reload_table(masiv, table) {
         th.innerHTML = item.id;
         th2.innerHTML = responce.data.name;
         p_car.innerHTML = categories[item.category];
-        th3.innerHTML = item.total;
+        th3.innerHTML = item.amount;
         date.innerHTML = item.date;
         th.classList.add("th");
         date.classList.add("th_date");

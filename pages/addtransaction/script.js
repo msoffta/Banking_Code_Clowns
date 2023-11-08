@@ -1,101 +1,59 @@
-import { getData, patchData, postData} from "../../modules/helpers";
+import { getData, patchData, postData } from "../../modules/helpers";
 import { user } from "../../modules/user";
-const trans = document.forms.transactions;
 
-async function fillWallets() {
-    try {
-        const responce = await getData("/wallets?user_id=" + user.id);
-        if (
-            responce.status !== 200 &&
-            responce.status !== 201 &&
-            responce.status !== 304
-        )
-            return;
-        if (responce.data.length === 0) {
-            alert("У вас нет кошельков");
-            location.assign("/pages/wallets/");
+let form = document.forms.transactions
+let select = form.querySelector('select')
+let wallets = []
+
+
+getData('/wallets?user_id=' + user.id)
+    .then(res => {
+        for(let item of res.data) {
+            let opt = new Option(`Wallet: ${item.name}`, item.id)
+            select.append(opt)
         }
-        let resData = await responce.data;
-        let wallets = trans.querySelector("select[name='wallet']");
+        wallets = res.data
+    })
 
-        for (let item of resData) {
-            let option = document.createElement("option");
-            option.value = item.id;
-            option.innerHTML = `Кошелек: ${item.name}`;
-            wallets.appendChild(option);
-        }
-    } catch (error) {
-        console.log(error);
-    }
-}
-async function transactionValidate(data) {
-    try {
-        const responce = await getData(`/wallets/?id=${data.get("wallet")}`);
-        if (
-            responce.status !== 200 &&
-            responce.status !== 201 &&
-            responce.status !== 304
-        )
-            return;
-        if (/^\d+$/.test(data.get("amount"))) {
-            
-        } else {
-            return alert("Некорректная сумма");
-        }
-        let resData = await responce.data[0];
-        
-        
-        if (+data.get("amount") > +resData.balance) {
-            alert("Недостаточно средств");
-            return;
-        } else if (+data.get("amount") <= 0) {
-            alert("Сумма должна быть больше нуля");
-            return;
-        } else {
-            patchData(`/wallets/${data.get("wallet")}`, {
-                balance: +resData.balance - +data.get("amount"),
-            }).then((res) => {
-                if (
-                    res.status === 200 ||
-                    res.status === 201 ||
-                    res.status === 304
-                ) {
-                    alert("Кошелек обновлен");
-                }
-            })
-            let newData = {
-                user_id: user.id,
-                wallet_id: +data.get("wallet"),
-                total: +data.get("amount"),
-                category: data.get("category"),
-                date: data.get("date"),
-            };
 
-            let res = await postData("/transactions", newData);
-            console.log(res);
-
-            if (
-                res.status === 200 ||
-                res.status === 201 ||
-                res.status === 304
-            ) {
-                alert("Транзакция добавлена");
-                location.assign("/pages/transactions/");
-            }
-        }
-    } catch (error) {
-        console.error(error);
-    }
-}
-
-window.onload = () => {
-    fillWallets();
-    let dateInput = trans.querySelector("[name='date']");
-    dateInput.value = new Date().toISOString().substring(0, 10);
-};
-
-trans.onsubmit = (e) => {
+form.onsubmit = (e) => {
     e.preventDefault();
-    let data = new FormData(trans);
-    transactionValidate(data);
-};
+
+    let transaction = {user_id: user.id}
+    let fm = new FormData(form)
+    fm.forEach((val, key) => transaction[key] = val)
+
+    let wallet = wallets.find(item => +item.id === +transaction.wallet_id)
+
+    delete wallet.id
+    delete wallet.user_id
+    delete wallet.currency
+
+    transaction.wallet = wallet
+
+    if(wallet.balance < transaction.amount) {
+        alert('Not enough money')
+        return
+    }
+
+    patchData('/wallets/' + transaction.wallet_id, {
+        balance: +wallet.balance - +transaction.amount
+    })
+        .then(res => {
+            if(res.status === 200 || res.status === 201) {
+                postData('/transactions', transaction)
+                    .then(res => {
+                        if(res.status === 200 || res.status === 201) {
+                            alert('success')
+                            location.assign('/pages/transactions/')
+                        } else {
+                            alert(res.statusText)
+                        }
+                    })
+            } else {
+                alert(res.statusText)
+            }
+        })
+
+
+}
