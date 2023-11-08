@@ -1,11 +1,17 @@
-import axios from "axios";
 import { user } from "../../modules/user";
-import { postData } from "../../modules/helpers";
+import { getSymbols, postData } from "../../modules/helpers";
 
 let addwallet = document.forms.addwallet;
-const baseUrl = "http://localhost:8080";
+let select = addwallet.querySelector('select')
 
-console.log(user);
+getSymbols()
+    .then(res => {
+        for(let key in res) {
+            let opt = new Option(`${key}: ${res[key]}`, key)
+
+            select.append(opt)
+        }
+    })
 
 addwallet.onsubmit = (e) => {
     e.preventDefault();

@@ -92,6 +92,13 @@
       "balance": 49900,
       "user_id": 1,
       "id": 3
+    },
+    {
+      "name": "Visa",
+      "currency": "KRW",
+      "balance": 100,
+      "user_id": 1,
+      "id": 4
     }
   ],
   "transactions": [

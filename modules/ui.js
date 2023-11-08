@@ -118,6 +118,7 @@ export function makeHeader() {
 
     logginedNow.href = "#";
     logginedNow.innerHTML = "alexadams@google.com";
+    logginedNow.setAttribute('data-email', "")
 
     logOutSpan.classList.add("material-symbols-outlined");
     logOutSpan.innerHTML = "logout";

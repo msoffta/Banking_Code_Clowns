@@ -43,6 +43,28 @@ export const deleteData = async (resource) => {
     }
 }
 
+export const getSymbols = async () => {
+    const symbols = localStorage.getItem('symbols')
+
+    if(symbols) return JSON.parse(symbols)
+
+    try {
+        const res = await axios.get('https://api.apilayer.com/fixer/symbols', {
+            headers: {
+                apikey: import.meta.env.VITE_API_KEY
+            }
+        })
+
+        localStorage.setItem('symbols', JSON.stringify(res?.data?.symbols))
+
+
+        return res?.data?.symbols
+    } catch(e) {
+        console.log(e);
+    }
+}
+
+
 export const getRandomColor = () => {
     var letters = '0123456789ABCDEF';
     var color = '#';
