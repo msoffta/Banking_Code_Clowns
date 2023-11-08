@@ -13,7 +13,7 @@ addwallet.onsubmit = (e) => {
     let wallet = {
         name: data.get("name"),
         currency: data.get("currency"),
-        balance: data.get("balance"),
+        balance: +data.get("balance"),
         user_id: user.id
     }
 
@@ -25,4 +25,5 @@ addwallet.onsubmit = (e) => {
             }
         })
 };
+
 

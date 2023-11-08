@@ -8,9 +8,8 @@ let tbody = document.querySelector('tbody')
 
 getData('/wallets?user_id=' + user.id)
     .then(res => reload_card(res.data, container))
-
-
-
+getData('/transactions?user_id=' + user.id)
+    .then(res => reload_table(res.data, tbody))
 
 makeHeader()
 // reload_card(arr, container)

@@ -204,20 +204,27 @@ header {
     margin-top: 60px;
 }
 
-tr {
-    display: flex;
-    gap: 105px;
-}
+// tr {
+//     display: flex;
+//     gap: 165px;
+// }
 
 .table_container h2 {
     margin-bottom: 30px;
 }
 
-.cart_tr {
-    display: flex;
-    gap: 186px;
-}
-
+// .cart_tr {
+//     display: flex;
+//     gap: 256px;
+// }
+table {
+    width: 100%;
+  }
+  th, td {
+    // border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+  }
 .cart_th {
     margin-top: 10px;
 }

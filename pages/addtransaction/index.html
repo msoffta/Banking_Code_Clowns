@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add transaction</title>
     <link rel="stylesheet" href="style.css">
-	<script async type="module" src="/modules/guardian.js" ></script>
+    <script async type="module" src="/modules/guardian.js"></script>
 </head>
+
 <body>
     <!-- <h1>Add transaction</h1> -->
 
-    <form>
+    <form name="addtransaction">
         <h1>Добавить транзакцию</h1>
-        <input type="text" placeholder="Из кошелька">
-        <input type="text" placeholder="Сумма">
-        <input type="text" placeholder="Категория">
-        <button type="reset">Добавить</button>
-     </form>
+        <input type="text" name="wallet">
+        <input type="text" name="sum" placeholder="Сумма">
+        <input type="text" name="category" placeholder="Категория">
+        <input type="date" name="date">
+        <button>Добавить</button>
+    </form>
 
-     <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 
-    
+
 </body>
+
 </html>

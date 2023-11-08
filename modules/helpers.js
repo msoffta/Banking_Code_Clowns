@@ -22,3 +22,13 @@ export const postData = async (resource, body) => {
         console.log(e);
     }
 }
+
+export const patchData = async (resource, body) => {
+    try {
+        const res = await axios.patch(baseUrl + resource, body)
+        
+        return res
+    } catch(e) {
+        console.log(e);
+    }
+}

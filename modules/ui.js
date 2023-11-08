@@ -1,5 +1,7 @@
-export function reload_card(massiv,place) {
-    place.innerHTML = ""
+import { user } from "./user";
+
+export function reload_card(massiv, place) {
+    // place.innerHTML = ""
     for (let item of massiv) {
         let article = document.createElement('article'),
             h3 = document.createElement('h3'),
@@ -14,7 +16,7 @@ export function reload_card(massiv,place) {
         if (item.id >= 5 && item.id <= 10) {
             article.style.background = " linear-gradient(84deg, #5F0A87 2.27%, #A4508B 92.26%)"
         }
-        if (item.id >=10 && item.id <= 15 ) {
+        if (item.id >= 10 && item.id <= 15) {
             article.style.background = " linear-gradient(84deg, #D7816A 2.27%, #BD4F6C 92.26%)"
         }
 
@@ -23,22 +25,15 @@ export function reload_card(massiv,place) {
         h3.innerHTML = item.name
         h4.innerHTML = item.currency
         p.innerHTML = `Balance: ${item.balance}`
-
-
-        
-
-
-
-
-        cart.append(article)
-        article.append(h3,h4, p)
+        place.append(article)
+        article.append(h3, h4, p)
 
     }
 }
 
 
 export function reload_table(masiv, table) {
-    table.innerHTML = ""
+    // table.innerHTML = ""
     for (let item of masiv) {
         let tr = document.createElement('tr'),
             th = document.createElement('th'),
@@ -51,10 +46,10 @@ export function reload_table(masiv, table) {
         th.classList.add("cart_th")
 
         th.innerHTML = item.id
-        th2.innerHTML = item.cart_name
-        th3.innerHTML = item.cart_amount
-        p_car.innerHTML = item.cart_Transaction_amount
-        date.innerHTML = item.cart_time
+        th2.innerHTML = item.wallet_name
+        th3.innerHTML = item.sum
+        p_car.innerHTML = item.category
+        date.innerHTML = item.date
         th.classList.add('th')
         date.classList.add('th_date')
         th2.classList.add('th')
@@ -115,6 +110,7 @@ export function makeHeader() {
     logOutSpan.classList.add("material-symbols-outlined");
     logOutSpan.innerHTML = "logout";
 
+
     document.body.prepend(header);
     header.append(wrap);
     wrap.append(leftNav, rightNav);
@@ -145,12 +141,12 @@ export function makeHeader() {
         noLeave.classList.add("no__leave");
 
         leave.innerHTML = "Да";
+        leave.onclick = () => {
+            localStorage.clear();
+            location.reload();
+        };
         noLeave.innerHTML = "Нет";
 
-        leave.onclick = function () {
-            modal.remove();
-            backdrop.remove();
-        };
 
         noLeave.onclick = function () {
             modal.remove();
