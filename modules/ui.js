@@ -1,5 +1,7 @@
-export function reload_card(massiv, cart) {
+import { getData, getRandomColor } from "./helpers";
+import { user } from "./user";
 
+export function reload_card(massiv, cart) {
     for (let item of massiv) {
         let article = document.createElement('article'),
             h3 = document.createElement('h3'),
@@ -36,40 +38,45 @@ export function reload_card(massiv, cart) {
     }
 }
 
+const categories = {
+    food: "Еда",
+    entertainment: "Развлечения",
+    health: "Здоровье",
+    other: "Другое",
+};
 
-export function reload_table(masiv, table) {
-    table.innerHTML = ""
+export async function reload_table(masiv, table) {
+    table.innerHTML = "";
     for (let item of masiv) {
-        let tr = document.createElement('tr'),
-            th = document.createElement('th'),
-            th2 = document.createElement('th'),
-            th3 = document.createElement('th'),
-            p_car = document.createElement('th'),
-            date = document.createElement('th');
+        const responce = await getData("/wallets/" + item.wallet_id)
+        let tr = document.createElement("tr"),
+            th = document.createElement("th"),
+            th2 = document.createElement("th"),
+            th3 = document.createElement("th"),
+            p_car = document.createElement("th"),
+            date = document.createElement("th");
 
-        tr.classList.add("cart_tr")
-        th.classList.add("cart_th")
+        tr.classList.add("cart_tr");
+        th.classList.add("cart_th");
 
-        th.innerHTML = item.id
-        th2.innerHTML = item.cart_name
-        th3.innerHTML = item.cart_amount
-        p_car.innerHTML = item.cart_Transaction_amount
-        date.innerHTML = item.cart_time
-        th.classList.add('th')
-        date.classList.add('th_date')
-        th2.classList.add('th')
-        th3.classList.add('th')
-        p_car.classList.add('th')
+        th.innerHTML = item.id;
+        th2.innerHTML = responce.data.name;
+        p_car.innerHTML = categories[item.category];
+        th3.innerHTML = item.total;
+        date.innerHTML = item.date;
+        th.classList.add("th");
+        date.classList.add("th_date");
+        th2.classList.add("th");
+        th3.classList.add("th");
+        p_car.classList.add("th");
 
-
-
-        table.append(tr)
-        tr.append(th, th2, p_car, th3, date)
+        table.append(tr);
+        tr.append(th, th2, p_car, th3, date);
     }
 }
 
 export function makeHeader() {
-    let locale = location.pathname.split('/').at(-2) || "home"
+    let locale = location.pathname.split("/").at(-2) || "home";
 
     let header = document.createElement("header");
     let wrap = document.createElement("div");
@@ -90,13 +97,13 @@ export function makeHeader() {
 
     switch (locale) {
         case "home":
-            main.classList.add('active_url')
+            main.classList.add("active_url");
             break;
         case "wallets":
-            myWallets.classList.add('active_url')
+            myWallets.classList.add("active_url");
             break;
         case "transactions":
-            myTransactions.classList.add('active_url')
+            myTransactions.classList.add("active_url");
             break;
     }
 
@@ -148,8 +155,8 @@ export function makeHeader() {
         noLeave.innerHTML = "Нет";
 
         leave.onclick = function () {
-            modal.remove();
-            backdrop.remove();
+            localStorage.clear();
+            location.reload();
         };
 
         noLeave.onclick = function () {
