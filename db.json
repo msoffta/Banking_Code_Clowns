@@ -97,6 +97,14 @@
       "category": "food",
       "date": "2023-11-08",
       "id": 3
+    },
+    {
+      "user_id": 1,
+      "wallet_id": "1",
+      "total": null,
+      "category": "clothes",
+      "date": "2023-11-08",
+      "id": 4
     }
   ]
 }
