@@ -148,8 +148,8 @@ export function makeHeader() {
         noLeave.innerHTML = "Нет";
 
         leave.onclick = function () {
-            modal.remove();
-            backdrop.remove();
+            localStorage.clear();
+            location.reload()
         };
 
         noLeave.onclick = function () {

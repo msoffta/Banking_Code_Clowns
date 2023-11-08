@@ -31,3 +31,10 @@ let tbody = document.querySelector('tbody')
 
 makeHeader();
 reload_table(arr, tbody)
+
+
+let add_transactions_btn = document.querySelector('.add_transactions_btn')
+
+add_transactions_btn.onclick = () => {
+    location.assign('/pages/addtransaction/')
+}

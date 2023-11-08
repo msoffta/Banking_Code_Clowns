@@ -10,15 +10,21 @@
 <body>
     <!-- <h1>Add transaction</h1> -->
 
-    <form>
+    <form name="addtransaction">
         <h1>Добавить транзакцию</h1>
-        <input type="text" placeholder="Из кошелька">
+        <select name="wallet" id="choose_wallet">
+
+        </select>
         <input type="text" placeholder="Сумма">
-        <input type="text" placeholder="Категория">
-        <button type="reset">Добавить</button>
+        <select name="category">
+            <option value="food">food</option>
+            <option value="health">health</option>
+            <option value="clothes">clothes</option>
+        </select>        
+        <button type="submit">Добавить</button>
      </form>
 
-     <script src="script.js"></script>
+     <script type="module" src="script.js"></script>
 
     
 </body>

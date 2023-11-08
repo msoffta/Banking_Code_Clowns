@@ -66,18 +66,11 @@
   ],
   "wallets": [
     {
-      "name": "Visa",
-      "currency": "BTC",
-      "balance": "2",
-      "user_id": 3,
-      "id": 1
-    },
-    {
-      "name": "Mastercard",
-      "currency": "UZS",
-      "balance": 96000,
+      "name": "Sheryl",
+      "currency": "RUB",
+      "balance": "20000",
       "user_id": 1,
-      "id": 2
+      "id": 1
     }
   ],
   "transactions": [
@@ -88,6 +81,22 @@
       "total": 4000,
       "category": "food",
       "date": "2023-11-06"
+    },
+    {
+      "user_id": 1,
+      "wallet_id": "1",
+      "total": null,
+      "category": "food",
+      "date": "2023-11-08",
+      "id": 2
+    },
+    {
+      "user_id": 1,
+      "wallet_id": "1",
+      "total": null,
+      "category": "food",
+      "date": "2023-11-08",
+      "id": 3
     }
   ]
 }

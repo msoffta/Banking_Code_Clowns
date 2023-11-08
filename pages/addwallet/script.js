@@ -4,7 +4,6 @@ import { user } from '../../modules/user';
 let addwallet = document.forms.addwallet;
 const baseUrl = "http://localhost:8080"
 
-console.log(user);
 
 addwallet.onsubmit = (e) => {
     e.preventDefault();
