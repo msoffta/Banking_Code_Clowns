@@ -71,6 +71,13 @@
       "balance": "20000",
       "user_id": 1,
       "id": 1
+    },
+    {
+      "name": "Alex",
+      "currency": "RUB",
+      "balance": "10000",
+      "user_id": 1,
+      "id": 2
     }
   ],
   "transactions": [
@@ -97,6 +104,22 @@
       "category": "food",
       "date": "2023-11-08",
       "id": 3
+    },
+    {
+      "user_id": 1,
+      "wallet_id": "1",
+      "total": null,
+      "category": "food",
+      "date": "2023-11-08",
+      "id": 4
+    },
+    {
+      "user_id": 1,
+      "wallet_id": "1",
+      "total": null,
+      "category": "food",
+      "date": "2023-11-09",
+      "id": 5
     }
   ]
 }
