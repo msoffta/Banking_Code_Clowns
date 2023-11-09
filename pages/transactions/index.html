@@ -1,52 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="https://gistcdn.githack.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
+        <link rel="stylesheet" href="./style.scss" />
+        <link rel="stylesheet" href="/style.scss" />
+        <script async type="module" src="/modules/guardian.js"></script>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet"
-        href="https://gistcdn.githack.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="./style.scss">
-    <link rel="stylesheet" href="/style.scss">
-	<script async type="module" src="/modules/guardian.js" ></script>
-</head>
+    <body>
+        <main>
+            <div class="wrapper">
+                <div class="info__wrapper">
+                    <h1 class="my_transactions_h1">Мои транзакции</h1>
+                    <a href="#" data-email class="email_p">alexadams@google.com</a>
+                </div>
 
-<body>
-    <main>
-
-        <div class="add_trans_box">
-        <h1 class="my_wallets_h1">Мои кошельки</h1>
-        <button class="add_transactions_btn">Добавить</button>
-    </div>
-
-        <p class="email_p">alexadams@google.com</p>
-
-        <div class="table_container container_cart">
-            <div class="table">
-                <table class="teble">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Отправлено с кошелька</th>
-                            <th>Категория </th>
-                            <th>Сумма транзации</th>
-                            <th>Когда</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-    
-                    </tbody>
-                </table>
-                
-                <a href="">Смотреть все оплаты</a>
+                <a href="/pages/addtransaction/" class="button" role="button">
+                    Добавить транзакцию
+                </a>
             </div>
 
-        </div>
-    </main>
-    <script type="module" src="./script.js"></script>
-</body>
+            <div class="table_container container_cart">
+                <div class="table">
+                    <table class="teble">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Отправлено с кошелька</th>
+                                <th>Категория</th>
+                                <th>Сумма транзации</th>
+                                <th>Когда</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
 
+                    <a href="">Смотреть все оплаты</a>
+                </div>
+            </div>
+        </main>
+        <script type="module" src="./script.js"></script>
+    </body>
 </html>
