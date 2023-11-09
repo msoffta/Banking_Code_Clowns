@@ -1,10 +1,17 @@
-import axios from 'axios'
-import { user } from '../../modules/user';
+import { user } from "../../modules/user";
+import { getSymbols, postData } from "../../modules/helpers";
 
 let addwallet = document.forms.addwallet;
-const baseUrl = "http://localhost:8080"
+let select = addwallet.querySelector('select')
 
-console.log(user);
+getSymbols()
+    .then(res => {
+        for(let key in res) {
+            let opt = new Option(`${key}: ${res[key]}`, key)
+
+            select.append(opt)
+        }
+    })
 
 addwallet.onsubmit = (e) => {
     e.preventDefault();
@@ -14,16 +21,13 @@ addwallet.onsubmit = (e) => {
         name: data.get("name"),
         currency: data.get("currency"),
         balance: +data.get("balance"),
-        user_id: user.id
-    }
+        user_id: user.id,
+    };
 
-    axios.post(baseUrl + '/wallets', wallet)
-        .then(res => {
-            if (res.status === 200 || res.status === 201) {
-                alert('Created succesfully')
-                location.assign('/pages/wallets/')
-            }
-        })
+    postData("/wallets", wallet).then((res) => {
+        if (res.status === 200 || res.status === 201) {
+            alert("Created succesfully");
+            location.assign("/pages/wallets/");
+        }
+    });
 };
-
-

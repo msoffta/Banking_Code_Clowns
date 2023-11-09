@@ -15,12 +15,11 @@ main {
 
 .my_wallets_h1 {
     font-size: 48px;
-
 }
 
 .email_p {
     font-size: 18px;
-    color: #0047FF;
+    color: #0047ff;
 }
 
 table {
@@ -28,12 +27,10 @@ table {
     margin-top: 20px;
 }
 
-
 tr {
     display: flex;
     gap: 105px;
     justify-content: space-between;
-
 }
 
 .table_container h2 {
@@ -74,26 +71,43 @@ tr {
     line-height: 110px;
 }
 
-
 tbody tr {
     border-bottom: 1px solid #c4c4c4;
     align-items: center;
     padding: 10px 0px;
 }
 
-.btn_transac button {
-    width: 100%;
-    height: 30px;
-    background-color: #0047FF;
-    padding: 5px;
-    border: none;
-    color: white;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.btn_transac {
-
+.wrapper {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+
+    .info__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h1 {
+            font-size: 48px;
+        }
+
+        a {
+            color: #0047ff;
+            font-weight: 600;
+            font-size: 18px;
+        }
+    }
+
+    .button {
+        padding: 15px 30px;
+        border-radius: 15px;
+        border: none;
+        background: #0047ff;
+        font-family: Gilroy;
+        font-weight: 600;
+        font-size: 16px;
+        cursor: pointer;
+        color: #fff;
+    }
 }

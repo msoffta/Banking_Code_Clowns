@@ -5,7 +5,6 @@
     /* outline: none; */
     text-decoration: none;
 }
-
 form {
     display: flex;
     justify-content: center;
@@ -13,10 +12,9 @@ form {
     align-items: center;
     gap: 20px;
     padding: 0 0 50px;
-
 }
-
-form input {
+form input,
+form select {
     height: 60px;
     width: 440px;
     border-radius: 10px;
@@ -25,9 +23,15 @@ form input {
     font-size: 18px;
     color: black;
 }
+input:focus,
+select:focus {
+    border-color: #0047ff;
+    outline: none;
+}
 
-input:focus {
-    border-color: #0047FF;
+input:focus-visible,
+select:focus-visible {
+    border-color: #0047ff;
     outline: none;
 }
 
@@ -37,32 +41,19 @@ form button {
     color: white;
     width: 440px;
     height: 60px;
-    background-color: #0047FF;
+    background-color: #0047ff;
     border-radius: 10px;
     border: none;
     cursor: pointer;
 }
-
 button:hover {
     background-color: #0340da;
 }
-
 button:active {
     background-color: #0533a6;
 }
-
 h1 {
     font-weight: 700;
     font-size: 50px;
     padding: 100px 0 0;
-}
-
-select {
-    height: 60px;
-    width: 440px;
-    border-radius: 10px;
-    border: 1px solid black;
-    padding: 5px 10px;
-    font-size: 18px;
-    color: black;
 }

@@ -24,7 +24,6 @@
     overflow: hidden;
     font-weight: 500;
     border-radius: 15px;
-    background: linear-gradient(84deg, #20BF55 2.27%, #01BAEF 92.26%);
 
     
 }
@@ -53,6 +52,8 @@
     /* margin-left: 150px; */
     font-size: 50px;
     border: 1px dashed  blue;
+
+    cursor: pointer;
     
 }
 

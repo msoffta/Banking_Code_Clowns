@@ -12,17 +12,22 @@
 <body>
     <!-- <h1>Add transaction</h1> -->
 
-    <form name="addtransaction">
+    <form name="transactions">
         <h1>Добавить транзакцию</h1>
-        <input type="text" name="wallet">
-        <input type="text" name="sum" placeholder="Сумма">
-        <input type="text" name="category" placeholder="Категория">
+        <select name="wallet_id">
+        </select>
+        <input name="amount" type="number" placeholder="Сумма">
+        <select name="category">
+            <option value="food">Еда</option>
+            <option value="entertainment">Развлечения</option>
+            <option value="health">Здоровье</option>
+            <option value="other">Другое</option>
+        </select>
         <input type="date" name="date">
-        <button>Добавить</button>
-    </form>
+        <button type="submit">Добавить</button>
+     </form>
 
-    <script type="module" src="script.js"></script>
-
+     <script type="module" src="script.js"></script>
 
 </body>
 
