@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-import { user } from "./user";
+import { getData } from "./helpers";
 
 export function reload_card(massiv, place) {
     // place.innerHTML = ""
-=======
-import { getData, getRandomColor } from "./helpers";
-import { user } from "./user";
 
-export function reload_card(massiv, cart) {
->>>>>>> 31f2b0775951960b767cca9b991dcb80fda8a205
     for (let item of massiv) {
         let article = document.createElement('article'),
             h3 = document.createElement('h3'),
@@ -35,6 +29,10 @@ export function reload_card(massiv, cart) {
         place.append(article)
         article.append(h3, h4, p)
 
+
+        article.onclick = () => {
+            location.assign("../details/index.html?id=" + item.id)
+        }
     }
 }
 
@@ -171,3 +169,4 @@ export function makeHeader() {
         buttons.append(leave, noLeave);
     };
 }
+

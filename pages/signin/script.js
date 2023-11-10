@@ -1,12 +1,21 @@
 import axios from 'axios'
 import { getData } from '../../modules/helpers';
 
+let signin = document.forms.signin;
+const baseUrl = "http://localhost:8080";
 
-const signin = document.forms.signin;
+// async function checkData(url, { email, password }) {
+//     const responce = await fetch(url);
 
+//     if (responce.ok) {
+//         let data = await responce.json();
+//         let result = data.filter((item) => {
+//             return item.email === email && item.password === password;
+//         });
 
-
-
+//         return result[0]
+//     }
+// }
 
 signin.onsubmit = (e) => {
     e.preventDefault();
