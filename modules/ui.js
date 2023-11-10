@@ -1,5 +1,6 @@
 import { getData, getRandomColor } from "./helpers";
 import { user } from "./user";
+// import { card_name, card_balance } from "../pages/card_page/script";
 
 export function reload_card(massiv, cart) {
   for (let item of massiv) {
@@ -27,16 +28,20 @@ export function reload_card(massiv, cart) {
     h4.innerHTML = item.currency;
     p.innerHTML = `Balance: ${item.balance}`;
 
+
+
+    // card_balance.innerHTML = item.balance;
+    // card_name.innerHTML = item.name;
+    // console.log(card_name);
+
+
+
     cart.append(article);
     article.append(h3, h4, p);
-
-
 
     article.onclick = () => {
       location.assign("/pages/card_page/");
     };
-
-
   }
 }
 
@@ -107,10 +112,10 @@ export function makeHeader() {
     case "transactions":
       myTransactions.classList.add("active_url");
       break;
-// ////////////////////////
-//     case "card_page":
-//       myTransactions.classList.add("active_url");
-//       break;
+    // ////////////////////////
+    //     case "card_page":
+    //       myTransactions.classList.add("active_url");
+    //       break;
   }
 
   main.href = "/";

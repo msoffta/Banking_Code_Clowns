@@ -1,4 +1,5 @@
 // import { getData } from '../../modules/helpers';
+// import { reload_card, reload_table } from "../../modules/ui"
 // import { user } from "../../modules/user";
 import { makeHeader } from "../../modules/ui"
 
@@ -8,6 +9,9 @@ makeHeader()
 
 
 let cards = document.querySelectorAll('.card');
+
+export let card_name = document.querySelector(".card_name");
+export let card_balance = document.querySelector(".card_balance");
 
 VanillaTilt.init(cards, {
     max: 15,  // Максимальный угол поворота карточки
