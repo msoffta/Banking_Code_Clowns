@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 120px;
+}
+
+main .add_trans_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.my_wallets_h1 {
+  font-size: 48px;
+}
+
+.add_transactions_btn {
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
+  width: 200px;
+  height: 50px;
+  background-color: #0047FF;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.add_transactions_btn:hover {
+  background-color: #0340da;
+}
+
+.add_transactions_btn:active {
+  background-color: #0533a6;
+}
+
+.email_p {
+  font-size: 18px;
+  color: #0047FF;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+}
+
+tr {
+  display: flex;
+  gap: 105px;
+  justify-content: space-between;
+}
+
+.table_container h2 {
+  margin-bottom: 30px;
+}
+
+.cart_tr {
+  display: flex;
+}
+
+.cart_th {
+  margin-top: 10px;
+}
+
+.teble {
+  margin-bottom: 20px;
+}
+
+.th {
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.th_date {
+  margin-left: -50px;
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.table a {
+  line-height: 110px;
+}
+
+tbody tr {
+  border-bottom: 1px solid #c4c4c4;
+  align-items: center;
+  padding: 10px 0px;
+}/*# sourceMappingURL=style.css.map */
