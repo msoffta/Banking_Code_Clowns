@@ -23,7 +23,14 @@ addwallet.onsubmit = (e) => {
         balance: +data.get("balance"),
         user_id: user.id,
     };
-
+    if (data.get("name") === "") {
+        alert('error')
+        return
+    }
+    if (data.get("balance") === "") {
+        alert('error')
+        return
+    }
     postData("/wallets", wallet).then((res) => {
         if (res.status === 200 || res.status === 201) {
             alert("Created succesfully");
