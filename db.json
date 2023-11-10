@@ -156,6 +156,7 @@
       "id": 3
     },
     {
+<<<<<<< HEAD
       "user_id": 11,
       "wallet_id": "6",
       "amount": "10",
@@ -178,6 +179,14 @@
         "balance": 45668
       },
       "id": 5
+=======
+      "user_id": 1,
+      "wallet_id": "1",
+      "total": null,
+      "category": "clothes",
+      "date": "2023-11-08",
+      "id": 4
+>>>>>>> e071ac180ebbcf75e7a76d7f3229852f12f0803a
     }
   ]
 }
