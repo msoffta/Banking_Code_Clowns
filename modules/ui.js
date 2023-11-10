@@ -21,8 +21,8 @@ export function reload_card(massiv, cart) {
 
         p.classList.add('grid_p')
 
-        h3.innerHTML = item.cart_name
-        p.innerHTML = item.cart_amount
+        h3.innerHTML = item.name
+        p.innerHTML = item.current
 
 
 
