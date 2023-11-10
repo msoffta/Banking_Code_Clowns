@@ -1,22 +1,19 @@
-// import { getData } from '../../modules/helpers';
-// import { reload_card, reload_table } from "../../modules/ui"
-// import { user } from "../../modules/user";
+import { getData } from "../../modules/helpers";
 import { makeHeader } from "../../modules/ui"
 
 makeHeader()
 
-
-
-
 let cards = document.querySelectorAll('.card');
+let id = location.search.split('=').at(-1)
+
 
 export let card_name = document.querySelector(".card_name");
 export let card_balance = document.querySelector(".card_balance");
 
 VanillaTilt.init(cards, {
-    max: 15,  // Максимальный угол поворота карточки
+    max: 40,  // Максимальный угол поворота карточки
     glare: true,  // Включаем эффект блика
-    'max-glare': 0.5,  // Регулируем интенсивность блика
+    'max-glare': .5,  // Регулируем интенсивность блика
 });
 let convert = document.querySelectorAll('.convert');
 
@@ -26,28 +23,21 @@ VanillaTilt.init(convert, {
     'max-glare': 0.3,  // Регулируем интенсивность блика
 });
 
+cards[0].onclick = () => {
+
+    cards[0].style.transition = "0.8s ease"
+    setTimeout(() => {
+        cards[0].classList.toggle('card_revert')
+        cards[0].style.transition = "0"
+    }, 0);
+}
 
 
-// {
-//     reverse: false,  // Включает/выключает реверсию наклона
-//     max:  35,  // Максимальный угол поворота карточки
-//     startX:  0,  // Начальное положение по X
-//     startY:  0,  // Начальное положение по Y
-//     perspective:  1000,   // Перспектива (чем меньше, тем ярче эффект)
-//     scale:  1,  // Масштабирование
-//     speed:  300,  // Скорость анимации в начале/в конце
-//     transition:  true,  // Нужна ли анимация в начале/конце
-//     axis:  null,  // Отключение одной оси (X/Y)
-//     reset:  true,  // Сбрасывать ли положение
-//     easing:  "cubic-bezier(.03,.98,.52,.99)",  // Анимация при старте/в конце
-//     glare:  false,  //Нужен ли эффект блика
-//     "max-glare":  1,  // Интенсивность (непрозрачность) блика (от 0 до 1)
-//     gyroscope:  true,  // Нужен ли эффект при наклоне телефона/другого устройства
-//     /* Максимальные и минимальные углы эффекта при наклоне устройства */
-//     gyroscopeMinAngleX:  -45,
-//     gyroscopeMaxAngleX:  45,
-//     gyroscopeMinAngleY:  -45, 
-//     gyroscopeMaxAngleY:  45,
-// }
 
+getData('/wallets/' + id)
+    .then(res => {
+        if(res.status !== 200 && res.status === 201) return
 
+        card_name.innerHTML = res.data.name
+        card_balance.innerHTML = `Balance: ${res.data.balance.toLocaleString('ru-RU')}`
+    })

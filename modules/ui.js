@@ -28,19 +28,11 @@ export function reload_card(massiv, cart) {
     h4.innerHTML = item.currency;
     p.innerHTML = `Balance: ${item.balance}`;
 
-
-
-    // card_balance.innerHTML = item.balance;
-    // card_name.innerHTML = item.name;
-    // console.log(card_name);
-
-
-
     cart.append(article);
     article.append(h3, h4, p);
 
-    article.onclick = () => {
-      location.assign("/pages/card_page/");
+    article.ondblclick = () => {
+      location.assign("/pages/card_page/?id=" + item.id);
     };
   }
 }
