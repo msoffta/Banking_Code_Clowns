@@ -71,10 +71,10 @@
       "id": 10
     },
     {
-      "name": "yura",
-      "surname": "surname",
-      "email": "ibadovunus55@gmail.com",
-      "password": "1234567",
+      "name": "Sheryl",
+      "surname": "Blossom",
+      "email": "SherylBlossom@gmail.com",
+      "password": "sherylblossom",
       "id": 11
     }
   ],
@@ -108,11 +108,18 @@
       "id": 4
     },
     {
-      "name": "yura",
+      "name": "das",
       "currency": null,
-      "balance": 100000,
+      "balance": 13,
       "user_id": 11,
       "id": 5
+    },
+    {
+      "name": "Alex",
+      "currency": "BMD",
+      "balance": 45658,
+      "user_id": 11,
+      "id": 6
     }
   ],
   "transactions": [
@@ -135,6 +142,42 @@
         "balance": 99900
       },
       "id": 2
+    },
+    {
+      "user_id": 11,
+      "wallet_id": "5",
+      "amount": "10",
+      "category": "health",
+      "date": "",
+      "wallet": {
+        "name": "das",
+        "balance": 23
+      },
+      "id": 3
+    },
+    {
+      "user_id": 11,
+      "wallet_id": "6",
+      "amount": "10",
+      "category": "entertainment",
+      "date": "2023-11-09",
+      "wallet": {
+        "name": "Alex",
+        "balance": 45678
+      },
+      "id": 4
+    },
+    {
+      "user_id": 11,
+      "wallet_id": "6",
+      "amount": "10",
+      "category": "food",
+      "date": "",
+      "wallet": {
+        "name": "Alex",
+        "balance": 45668
+      },
+      "id": 5
     }
   ]
 }
