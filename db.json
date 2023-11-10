@@ -69,6 +69,13 @@
       "email": "msoffta@gmail.com",
       "password": "123456",
       "id": 10
+    },
+    {
+      "name": "yura",
+      "surname": "surname",
+      "email": "ibadovunus55@gmail.com",
+      "password": "1234567",
+      "id": 11
     }
   ],
   "wallets": [
@@ -99,6 +106,13 @@
       "balance": 100,
       "user_id": 1,
       "id": 4
+    },
+    {
+      "name": "yura",
+      "currency": null,
+      "balance": 100000,
+      "user_id": 11,
+      "id": 5
     }
   ],
   "transactions": [
