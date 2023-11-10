@@ -20,8 +20,154 @@
       "email": "jasur@gmail.com",
       "password": "1234Jasur",
       "id": 3
+    },
+    {
+      "name": "fsd",
+      "surname": "dasdas",
+      "email": "Sheryl022604@gmail.com",
+      "password": "das323212312fds",
+      "id": 4
+    },
+    {
+      "name": "d",
+      "surname": "d",
+      "email": "Sheryl02204@gmail.com",
+      "password": "da3423fc",
+      "id": 5
+    },
+    {
+      "name": "qswdevb",
+      "surname": "das",
+      "email": "alexlee457d@gmail.com",
+      "password": "ds3fwe",
+      "id": 6
+    },
+    {
+      "name": "wesr",
+      "surname": "rwee",
+      "email": "dsarifkulo023232re1@gmail.com",
+      "password": "423dscfr3w",
+      "id": 7
+    },
+    {
+      "name": "aszx",
+      "surname": "asdf",
+      "email": "fzsihdlfd@gmail.com",
+      "password": "djwgz37",
+      "id": 8
+    },
+    {
+      "name": "das",
+      "surname": "das",
+      "email": "dsarifdcszxfkulo021@gmail.com",
+      "password": "das2e2qw",
+      "id": 9
+    },
+    {
+      "name": "Fozil",
+      "surname": "Muxsinov",
+      "email": "msoffta@gmail.com",
+      "password": "123456",
+      "id": 10
+    },
+    {
+      "name": "yura",
+      "surname": "surname",
+      "email": "ibadovunus55@gmail.com",
+      "password": "1234567",
+      "id": 11
     }
   ],
-  "wallets": [],
-  "transactions": []
+  "wallets": [
+    {
+      "name": "HYMO",
+      "currency": "usd",
+      "balance": 1,
+      "user_id": 10,
+      "id": 1
+    },
+    {
+      "name": "Visa",
+      "currency": "USD",
+      "balance": 1000,
+      "user_id": 1,
+      "id": 2
+    },
+    {
+      "name": "Humo",
+      "currency": "UZS",
+      "balance": 49900,
+      "user_id": 1,
+      "id": 3
+    },
+    {
+      "name": "Visa",
+      "currency": "KRW",
+      "balance": 100,
+      "user_id": 1,
+      "id": 4
+    },
+    {
+      "name": "yura",
+      "currency": null,
+      "balance": 99999,
+      "user_id": 11,
+      "id": 5
+    },
+    {
+      "name": "yura",
+      "currency": null,
+      "balance": 0,
+      "user_id": 11,
+      "id": 6
+    },
+    {
+      "name": "yura",
+      "currency": null,
+      "balance": 100000,
+      "user_id": 11,
+      "id": 7
+    },
+    {
+      "name": "yura",
+      "currency": null,
+      "balance": 100000,
+      "user_id": 11,
+      "id": 8
+    }
+  ],
+  "transactions": [
+    {
+      "user_id": 10,
+      "wallet_id": 1,
+      "total": 11,
+      "category": "food",
+      "date": "2023-11-08",
+      "id": 1
+    },
+    {
+      "user_id": 1,
+      "wallet_id": "3",
+      "amount": "50000",
+      "category": "health",
+      "date": "2023-11-08",
+      "wallet": {
+        "name": "Humo",
+        "balance": 99900
+      },
+      "id": 2
+    },
+    {
+      "user_id": 11,
+      "wallet_id": "5",
+      "amount": "1",
+      "category": "other",
+      "date": "2023-11-30",
+      "wallet": {
+        "name": "yura",
+        "balance": 100000
+      },
+      "id": 3
+    }
+  ]
 }

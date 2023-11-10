@@ -1,7 +1,13 @@
 import { getData, getRandomColor } from "./helpers";
 import { user } from "./user";
 
+
+export let idd 
+
+
 export function reload_card(massiv, cart) {
+
+    
 
     for (let item of massiv) {
         let article = document.createElement('article'),
@@ -23,14 +29,20 @@ export function reload_card(massiv, cart) {
 
         p.classList.add('grid_p')
 
-        h3.innerHTML = item.cart_name
-        p.innerHTML = item.cart_amount
+        h3.innerHTML = item.name
+        p.innerHTML = item.balance
 
 
 
 
         cart.append(article)
         article.append(h3,h4, p)
+
+
+        article.onclick = () => {
+            idd = item.id
+            location.assign('/pages/card/')
+        }
 
     }
 }
