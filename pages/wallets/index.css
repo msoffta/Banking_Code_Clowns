@@ -21,11 +21,10 @@
     height: 150px;
     display: flex;
     flex-direction: column;
-    gap: 70px;
+    gap: 20px;
     overflow: hidden;
     font-weight: 500;
     border-radius: 15px;
-    background: linear-gradient(84deg, #20BF55 2.27%, #01BAEF 92.26%);
 
     
 }
@@ -52,6 +51,8 @@
     margin-top: 20px;
     font-size: 50px;
     border: 1px dashed  blue;
+
+    cursor: pointer;
     
 }
 
