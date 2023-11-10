@@ -1,10 +1,14 @@
-import { getData } from "../../modules/helpers";
+import axios from "axios";
+import { getData, getSymbols, patchData } from "../../modules/helpers";
 import { makeHeader } from "../../modules/ui"
 
 makeHeader()
 
 let cards = document.querySelectorAll('.card');
+let select = document.querySelector('#convert_form select')
+let btn = document.querySelector('#convert_form button')
 let id = location.search.split('=').at(-1)
+let wallet = null
 
 
 export let card_name = document.querySelector(".card_name");
@@ -32,12 +36,49 @@ cards[0].onclick = () => {
     }, 0);
 }
 
+btn.onclick = () => {
+    axios.get(`https://api.apilayer.com/fixer/convert?to=${select.value}&from=${wallet?.currency}&amount=${wallet?.balance}`, {
+        headers: {
+            apikey: import.meta.env.VITE_API_KEY
+        }
+    })
+    .then(res => {
+        if(res.status !== 200 && res.status === 201) return
+        
+        patchData('/wallets/' + id, {
+            currency:  res?.data?.query?.to,
+            balance: res?.data?.result
+        })
+        .then(res => {
+            if(res.status !== 200 && res.status === 201) return
+
+            wallet = res.data
+
+            card_name.innerHTML = res.data.name
+            card_balance.innerHTML = `Balance: ${res.data.balance.toLocaleString('ru-RU')} ${res.data.currency}`
+
+            alert('success!')
+        })
+
+    })
+
+}
+
+
+getSymbols()    
+    .then(res => {
+        for(let key in res) {
+            let opt = new Option(`${key}: ${res[key]}`, key)
+            select.append(opt)
+        }
+    })
 
 
 getData('/wallets/' + id)
     .then(res => {
         if(res.status !== 200 && res.status === 201) return
+        wallet = res.data
 
         card_name.innerHTML = res.data.name
-        card_balance.innerHTML = `Balance: ${res.data.balance.toLocaleString('ru-RU')}`
+        card_balance.innerHTML = `Balance: ${res.data.balance.toLocaleString('ru-RU')} ${res.data.currency}`
     })
