@@ -116,10 +116,24 @@
     },
     {
       "name": "Alex",
-      "currency": "BMD",
-      "balance": 45658,
+      "currency": "AED",
+      "balance": 167678.609978,
       "user_id": 11,
       "id": 6
+    },
+    {
+      "name": "Sheryl",
+      "currency": "AED",
+      "balance": 3672990.971436,
+      "user_id": 11,
+      "id": 7
+    },
+    {
+      "name": "VISA",
+      "currency": "AED",
+      "balance": 1321,
+      "user_id": 11,
+      "id": 8
     }
   ],
   "transactions": [
@@ -178,6 +192,42 @@
         "balance": 45668
       },
       "id": 5
+    },
+    {
+      "user_id": 11,
+      "wallet_id": null,
+      "total": null,
+      "category": "food",
+      "date": "2023-11-12",
+      "id": 6
+    },
+    {
+      "user_id": 11,
+      "wallet_id": null,
+      "total": null,
+      "category": "health",
+      "date": "2023-11-12",
+      "id": 7
+    },
+    {
+      "user_id": 11,
+      "wallet_id": null,
+      "total": null,
+      "category": "food",
+      "date": "2023-11-12",
+      "id": 8
+    },
+    {
+      "user_id": 11,
+      "wallet_id": "7",
+      "amount": "10",
+      "category": "entertainment",
+      "date": "2023-11-13",
+      "wallet": {
+        "name": "Sheryl",
+        "balance": 92179676
+      },
+      "id": 9
     }
   ]
 }
