@@ -49,7 +49,7 @@ export const getSymbols = async () => {
     if(symbols) return JSON.parse(symbols)
 
     try {
-        const res = await axios.get('https://api.apilayer.com/fixer/symbols', {
+        const res = await axios.get("https://api.apilayer.com/fixer/symbols", {
             headers: {
                 apikey: import.meta.env.VITE_API_KEY
             }

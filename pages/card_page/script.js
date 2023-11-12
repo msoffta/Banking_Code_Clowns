@@ -8,6 +8,7 @@ let cards = document.querySelectorAll('.card');
 let select = document.querySelector('#convert_form select')
 let btn = document.querySelector('#convert_form button')
 let id = location.search.split('=').at(-1)
+// let loader = document.querySelector('')
 let wallet = null
 
 
