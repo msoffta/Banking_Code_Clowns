@@ -1,35 +1,33 @@
-let next = document.querySelector(".next")
-let email = document.querySelector(".email")
-let password = document.querySelector(".password")
+import axios from "axios";          
+    
+const signin = document.forms.signin;
+const baseUrl = "http://localhost:8080";
+
+
+axios.get(baseUrl + "/users")
+.then(res => res.json())
+.then(res => console.log(res))
 
 
 
-const bas = " http://localhost:8080"
+signin.onsubmit = function (e) {
+    e.preventDefault();
+    let data = new FormData(signin);
+    let user = {
+        email: data.get("email"),
+        password: data.get("password"),
+    }
 
+    axios.get("baseUrl" + "/users?email=" + user.email)
+    .then(res => {
+        if(res.status !== 201 || res.status !== 200) {
+        if(res.data.length > 0) {
 
-
- function avaz (arr) {
-
- 
-   next.onclick = (e) => {
-   
-
-    arr.filter(el => {
-        if(el.email === email.value && el.password === password.value ) {
-            location.assign('/index.html')
-
-            localStorage.setItem('user' , JSON.stringify(el))
         }
-    })
+    }
+    }) 
+    
     
 
-
-
+      
 }
-
-}
-
-
-fetch(bas + "/dannie")
-.then(res => res.json())
-.then(res => avaz(res))

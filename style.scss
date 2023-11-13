@@ -16,6 +16,11 @@ header {
     right: 0;
     top: 0;
 
+    .active_url {
+        text-decoration: underline !important;
+        color: #0055ff !important;
+    }
+
     img {
         max-width: 100%;
     }
