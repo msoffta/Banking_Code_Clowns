@@ -85,4 +85,4 @@ getData('/wallets/' + id)
 
         card_name.innerHTML = res.data.name
         card_balance.innerHTML = `Balance: ${res.data.balance.toLocaleString('ru-RU')} ${res.data.currency}`
-    })
+    }) 
