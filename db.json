@@ -81,8 +81,8 @@
   "wallets": [
     {
       "name": "HYMO",
-      "currency": "usd",
-      "balance": 1,
+      "currency": "UZS",
+      "balance": 12275.296322,
       "user_id": 10,
       "id": 1
     },
