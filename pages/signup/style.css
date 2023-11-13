@@ -65,3 +65,6 @@ a {
     font-size: 20px;
     color: #0047FF;
 }
+.error-field {
+    color: red !important;
+  }

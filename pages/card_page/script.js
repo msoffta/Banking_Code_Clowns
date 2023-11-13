@@ -1,6 +1,7 @@
 import axios from "axios";
 import { getData, getSymbols, patchData } from "../../modules/helpers";
 import { makeHeader } from "../../modules/ui"
+import { user } from "../../modules/user";
 
 makeHeader()
 
@@ -8,6 +9,7 @@ let cards = document.querySelectorAll('.card');
 let select = document.querySelector('#convert_form select')
 let btn = document.querySelector('#convert_form button')
 let id = location.search.split('=').at(-1)
+// let loader = document.querySelector('')
 let wallet = null
 
 
@@ -37,37 +39,38 @@ cards[0].onclick = () => {
 }
 
 btn.onclick = () => {
+    btn.innerHTML = `<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>`
     axios.get(`https://api.apilayer.com/fixer/convert?to=${select.value}&from=${wallet?.currency}&amount=${wallet?.balance}`, {
         headers: {
             apikey: import.meta.env.VITE_API_KEY
         }
     })
-    .then(res => {
-        if(res.status !== 200 && res.status === 201) return
-        
-        patchData('/wallets/' + id, {
-            currency:  res?.data?.query?.to,
-            balance: res?.data?.result
-        })
         .then(res => {
-            if(res.status !== 200 && res.status === 201) return
+            if (res.status !== 200 && res.status === 201) return
+            patchData('/wallets/' + id, {
+                currency: res?.data?.query?.to,
+                balance: res?.data?.result
+            })
+                .then(res => {
+                    if (res.status !== 200 && res.status === 201) return
 
-            wallet = res.data
+                    wallet = res.data
 
-            card_name.innerHTML = res.data.name
-            card_balance.innerHTML = `Balance: ${res.data.balance.toLocaleString('ru-RU')} ${res.data.currency}`
+                    card_name.innerHTML = res.data.name
+                    card_balance.innerHTML = `Balance: ${res.data.balance.toLocaleString('ru-RU')} ${res.data.currency}`
 
-            alert('success!')
+                    alert('success!')
+                })
+
         })
-
-    })
+        .finally(() => btn.innerHTML = "Convert")
 
 }
 
 
-getSymbols()    
+getSymbols()
     .then(res => {
-        for(let key in res) {
+        for (let key in res) {
             let opt = new Option(`${key}: ${res[key]}`, key)
             select.append(opt)
         }
@@ -76,9 +79,12 @@ getSymbols()
 
 getData('/wallets/' + id)
     .then(res => {
-        if(res.status !== 200 && res.status === 201) return
+        if (res.status !== 200 && res.status === 201) return
         wallet = res.data
 
         card_name.innerHTML = res.data.name
         card_balance.innerHTML = `Balance: ${res.data.balance.toLocaleString('ru-RU')} ${res.data.currency}`
     })
+
+    let user_emails = document.querySelector('[data-email]')
+    user_emails.innerHTML = user.email

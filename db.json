@@ -1,183 +1,41 @@
 {
   "users": [
     {
-      "name": "Daler",
-      "surname": "Sharifkulov",
-      "email": "dsarifkulo021@gmail.com",
-      "password": "1234Daler",
+      "name": "jasur",
+      "surname": "gfdgdf",
+      "email": "jmukumzoda63@gmail.com",
+      "password": "12345rt",
       "id": 1
-    },
-    {
-      "name": "Daler",
-      "surname": "Sharifkulov",
-      "email": "dsarifkulo021@gmail.com",
-      "password": "1234Daler",
-      "id": 2
-    },
-    {
-      "name": "Jaska",
-      "surname": "Jasurov",
-      "email": "jasur@gmail.com",
-      "password": "1234Jasur",
-      "id": 3
-    },
-    {
-      "name": "fsd",
-      "surname": "dasdas",
-      "email": "Sheryl022604@gmail.com",
-      "password": "das323212312fds",
-      "id": 4
-    },
-    {
-      "name": "d",
-      "surname": "d",
-      "email": "Sheryl02204@gmail.com",
-      "password": "da3423fc",
-      "id": 5
-    },
-    {
-      "name": "qswdevb",
-      "surname": "das",
-      "email": "alexlee457d@gmail.com",
-      "password": "ds3fwe",
-      "id": 6
-    },
-    {
-      "name": "wesr",
-      "surname": "rwee",
-      "email": "dsarifkulo023232re1@gmail.com",
-      "password": "423dscfr3w",
-      "id": 7
-    },
-    {
-      "name": "aszx",
-      "surname": "asdf",
-      "email": "fzsihdlfd@gmail.com",
-      "password": "djwgz37",
-      "id": 8
-    },
-    {
-      "name": "das",
-      "surname": "das",
-      "email": "dsarifdcszxfkulo021@gmail.com",
-      "password": "das2e2qw",
-      "id": 9
-    },
-    {
-      "name": "Fozil",
-      "surname": "Muxsinov",
-      "email": "msoffta@gmail.com",
-      "password": "123456",
-      "id": 10
-    },
-    {
-      "name": "Sheryl",
-      "surname": "Blossom",
-      "email": "SherylBlossom@gmail.com",
-      "password": "sherylblossom",
-      "id": 11
     }
   ],
   "wallets": [
     {
-      "name": "HYMO",
-      "currency": "usd",
-      "balance": 1,
-      "user_id": 10,
-      "id": 1
-    },
-    {
       "name": "Visa",
-      "currency": "USD",
-      "balance": 1000,
-      "user_id": 1,
-      "id": 2
-    },
-    {
-      "name": "Humo",
-      "currency": "EUR",
-      "balance": 3.799566,
+      "currency": "TJS",
+      "balance": 769758.984424,
       "user_id": 1,
       "id": 3
     },
     {
-      "name": "Visa",
-      "currency": "KRW",
-      "balance": 100,
+      "name": "Humo",
+      "currency": "AZN",
+      "balance": 16.513059,
       "user_id": 1,
       "id": 4
-    },
-    {
-      "name": "das",
-      "currency": null,
-      "balance": 13,
-      "user_id": 11,
-      "id": 5
-    },
-    {
-      "name": "Alex",
-      "currency": "BMD",
-      "balance": 45658,
-      "user_id": 11,
-      "id": 6
     }
   ],
   "transactions": [
     {
-      "user_id": 10,
-      "wallet_id": 1,
-      "total": 11,
-      "category": "food",
-      "date": "2023-11-08",
-      "id": 1
-    },
-    {
       "user_id": 1,
-      "wallet_id": "3",
-      "amount": "50000",
-      "category": "health",
-      "date": "2023-11-08",
+      "wallet_id": "4",
+      "amount": "1200",
+      "category": "entertainment",
+      "date": "2023-11-25",
       "wallet": {
         "name": "Humo",
-        "balance": 99900
+        "balance": 120000
       },
-      "id": 2
-    },
-    {
-      "user_id": 11,
-      "wallet_id": "5",
-      "amount": "10",
-      "category": "health",
-      "date": "",
-      "wallet": {
-        "name": "das",
-        "balance": 23
-      },
-      "id": 3
-    },
-    {
-      "user_id": 11,
-      "wallet_id": "6",
-      "amount": "10",
-      "category": "entertainment",
-      "date": "2023-11-09",
-      "wallet": {
-        "name": "Alex",
-        "balance": 45678
-      },
-      "id": 4
-    },
-    {
-      "user_id": 11,
-      "wallet_id": "6",
-      "amount": "10",
-      "category": "food",
-      "date": "",
-      "wallet": {
-        "name": "Alex",
-        "balance": 45668
-      },
-      "id": 5
+      "id": 1
     }
   ]
 }
