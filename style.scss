@@ -178,6 +178,7 @@ header {
     margin-top: 20px;
     width: 245px;
     height: 150px;
+    gap: 20px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -192,9 +193,7 @@ header {
     gap: 30px;
 }
 
-.grid_p {
-    margin-top: 40px;
-}
+
 
 .credit_cart a {
     line-height: 50px;

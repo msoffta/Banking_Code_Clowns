@@ -1,6 +1,5 @@
-import { getData, getRandomColor } from "./helpers";
-import { user } from "./user";
-// import { card_name, card_balance } from "../pages/card_page/script";
+import { getData} from "./helpers";
+
 
 export function reload_card(massiv, cart) {
   for (let item of massiv) {
@@ -34,6 +33,7 @@ export function reload_card(massiv, cart) {
     article.ondblclick = () => {
       location.assign("/pages/card_page/?id=" + item.id);
     };
+
   }
 }
 
