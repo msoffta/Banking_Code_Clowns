@@ -6,6 +6,7 @@ let select = addwallet.querySelector('select')
 
 getSymbols()
     .then(res => {
+        console.log(res);
         for(let key in res) {
             let opt = new Option(`${key}: ${res[key]}`, key)
 

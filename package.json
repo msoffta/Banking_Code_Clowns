@@ -16,6 +16,7 @@
     "concurrently": "^8.2.2",
     "json-server": "^0.17.4",
     "sass": "^1.69.5",
-    "swiper": "^11.0.3"
+    "swiper": "^11.0.3",
+    "vanilla-tilt": "^1.8.1"
   }
 }

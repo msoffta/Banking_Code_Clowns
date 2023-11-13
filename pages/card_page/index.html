@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Card</title>
+	<link rel="stylesheet"
+		href="https://gistcdn.githack.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css" />
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" href="/style.scss" />
+	<link rel="stylesheet" href="style.scss" />
+</head>
+
+<body>
+	<div class="container">
+
+		<div class="wrapper">
+			<div class="card">
+				<div class="photo">
+					<img src="/img/wallet_icon.png" alt="Photo" />
+					<h2 class="card_name">Card name</h2>
+				</div>
+				<h1 class="card_balance">Balance</h1>
+			</div>
+
+			<div class="convert">
+				<h1 class="convert_heading">Конвертировать в:</h1>
+				<div id="convert_form">
+					<select id="conversion"></select>
+					<button>Convert</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="transaction_chart">
+
+		</div>
+
+		<div class="load_box">
+			<div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+		</div>
+	</div>
+
+	
+
+	<script src="js/script.js"></script>
+	<script type="module" src="./script.js"></script>
+</body>
+
+</html>
