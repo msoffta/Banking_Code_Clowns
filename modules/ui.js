@@ -1,6 +1,5 @@
-import { getData, getRandomColor } from "./helpers";
-import { user } from "./user";
-// import { card_name, card_balance } from "../pages/card_page/script";
+import { getData} from "./helpers";
+
 
 
 export let idd 
@@ -38,6 +37,7 @@ export function reload_card(massiv, cart) {
     article.ondblclick = () => {
       location.assign("/pages/card_page/?id=" + item.id);
     };
+
   }
 }
 
@@ -177,3 +177,4 @@ export function makeHeader() {
     buttons.append(leave, noLeave);
   };
 }
+

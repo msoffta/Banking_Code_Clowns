@@ -4,8 +4,12 @@
     box-sizing: border-box;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .cart {
-    padding: 0px 200px 0px 150px;
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
@@ -16,7 +20,7 @@
 .grid {
     color: white;
     padding: 20px;
-    
+
     width: 245px;
     height: 150px;
     display: flex;
@@ -26,7 +30,7 @@
     font-weight: 500;
     border-radius: 15px;
 
-    
+
 }
 
 .btn {
@@ -34,9 +38,14 @@
     padding-left: 150px;
 
 }
+
 .button {
+<<<<<<< HEAD
+=======
+
+>>>>>>> dcb146f688934e206d390c47c467fe424beb3153
     padding: 20px;
-    background:white;
+    background: white;
     width: 245px;
     justify-content: center;
     align-items: center;
@@ -49,11 +58,12 @@
     border-radius: 15px;
     color: blue;
     margin-top: 20px;
+    /* margin-left: 150px; */
     font-size: 50px;
-    border: 1px dashed  blue;
+    border: 1px dashed blue;
 
     cursor: pointer;
-    
+
 }
 
 .title {
@@ -61,8 +71,6 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 10px 200px 0px 150px;
-    
     margin-top: 100px;
 }
 
@@ -76,6 +84,7 @@
     text-decoration: underline;
 }
 
+<<<<<<< HEAD
 .add {
     display: flex;
     justify-content: center;
@@ -122,3 +131,17 @@ button:active {
 }
 
 
+=======
+form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+img {
+    width: 13%;
+    position: relative;
+    bottom: 240px;
+    left: 220px;
+}
+>>>>>>> dcb146f688934e206d390c47c467fe424beb3153

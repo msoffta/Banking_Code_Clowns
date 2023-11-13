@@ -61,6 +61,7 @@ a {
     font-size: 20px;
     color: #0047FF;
 }
+<<<<<<< HEAD
 
 .green {
     border-color: green;
@@ -71,3 +72,8 @@ a {
     border-color: red;
     outline-color: red;
 }
+=======
+.error-field {
+    color: red !important;
+  }
+>>>>>>> dcb146f688934e206d390c47c467fe424beb3153
