@@ -17,6 +17,7 @@ user_emails.forEach(a => a.innerHTML = user.email)
 // 
 
 
+
 getData('/wallets?user_id=' + user.id)
     .then(res => reload_card(res.data, container))
 

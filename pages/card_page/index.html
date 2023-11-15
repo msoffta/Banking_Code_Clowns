@@ -11,11 +11,13 @@
 		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	<link rel="stylesheet" href="/style.scss" />
 	<link rel="stylesheet" href="style.scss" />
+	<link rel="stylesheet" href="./loader.scss" />
+	<!-- <link rel="stylesheet" href="./loader/index.html"> -->
+	<link rel="stylesheet" href="./index.html">
 </head>
 
 <body>
 	<div class="container">
-
 		<div class="wrapper">
 			<div class="card">
 				<div class="photo">
@@ -35,21 +37,36 @@
 		</div>
 
 		<div class="transaction_chart">
-			<div class="transaction_chart_heading">
-			<h1>CLD Unit chart</h1>
-			<div class="transaction_chart_days">
-			<p>Today</p>
-			<p>Week</p>
-			<p>Month</p>
-			<p>Year</p>
-		</div>
-		</div>
-
+			<div class="wrap">
+				<nav class="right">
+					<p>CLD UNIT CHART</p>
+				</nav>
+				<nav class="left">
+					<ul>
+						<li id="today" >Today</li>
+						<li id="week">Week</li>
+						<li>Mounth</li>
+						<li>Year</li>
+					</ul>
+				</nav>
+			</div>
+			<div style="width: 100%;">
+				<canvas id="acquisitions"></canvas>
+			</div>
+			<br>
+			<br>
+			<h1>Categories</h1>
+			<br>
+			<br>
+			<div style="width: 100%;">
+				<canvas id="categories"></canvas>
+			</div>
 		</div>
 
 	</div>
 
 	<script src="js/script.js"></script>
+	<script type="module" src="js/chart_custom.js"></script>
 	<script type="module" src="./script.js"></script>
 </body>
 

@@ -1,276 +1,113 @@
 {
   "users": [
     {
-      "name": "Daler",
-      "surname": "Sharifkulov",
-      "email": "dsarifkulo021@gmail.com",
-      "password": "1234Daler",
+      "name": "jasur",
+      "surname": "gfdgdf",
+      "email": "jmukumzoda63@gmail.com",
+      "password": "12345rt",
       "id": 1
-    },
-    {
-      "name": "Daler",
-      "surname": "Sharifkulov",
-      "email": "dsarifkulo021@gmail.com",
-      "password": "1234Daler",
-      "id": 2
-    },
-    {
-      "name": "Jaska",
-      "surname": "Jasurov",
-      "email": "jasur@gmail.com",
-      "password": "1234Jasur",
-      "id": 3
-    },
-    {
-      "name": "fsd",
-      "surname": "dasdas",
-      "email": "Sheryl022604@gmail.com",
-      "password": "das323212312fds",
-      "id": 4
-    },
-    {
-      "name": "d",
-      "surname": "d",
-      "email": "Sheryl02204@gmail.com",
-      "password": "da3423fc",
-      "id": 5
-    },
-    {
-      "name": "qswdevb",
-      "surname": "das",
-      "email": "alexlee457d@gmail.com",
-      "password": "ds3fwe",
-      "id": 6
-    },
-    {
-      "name": "wesr",
-      "surname": "rwee",
-      "email": "dsarifkulo023232re1@gmail.com",
-      "password": "423dscfr3w",
-      "id": 7
-    },
-    {
-      "name": "aszx",
-      "surname": "asdf",
-      "email": "fzsihdlfd@gmail.com",
-      "password": "djwgz37",
-      "id": 8
-    },
-    {
-      "name": "das",
-      "surname": "das",
-      "email": "dsarifdcszxfkulo021@gmail.com",
-      "password": "das2e2qw",
-      "id": 9
-    },
-    {
-      "name": "Fozil",
-      "surname": "Muxsinov",
-      "email": "msoffta@gmail.com",
-      "password": "123456",
-      "id": 10
-    },
-    {
-      "name": "Sheryl",
-      "surname": "Blossom",
-      "email": "SherylBlossom@gmail.com",
-      "password": "sherylblossom",
-      "id": 11
     }
   ],
   "wallets": [
     {
-      "name": "HYMO",
-      "currency": "usd",
-      "balance": 1,
-      "user_id": 10,
-      "id": 1
-    },
-    {
       "name": "Visa",
       "currency": "USD",
-      "balance": 1000,
-      "user_id": 1,
-      "id": 2
-    },
-    {
-      "name": "Humo",
-      "currency": "EUR",
-      "balance": 3.799566,
+      "balance": 9065.010704,
       "user_id": 1,
       "id": 3
     },
     {
-      "name": "Visa",
-      "currency": "KRW",
-      "balance": 100,
+      "name": "Humo",
+      "currency": "AZN",
+      "balance": 16.513059,
       "user_id": 1,
       "id": 4
-    },
-    {
-      "name": "das",
-      "currency": null,
-      "balance": 13,
-      "user_id": 11,
-      "id": 5
-    },
-    {
-      "name": "Alex",
-      "currency": "BAM",
-      "balance": 83325.370049,
-      "user_id": 11,
-      "id": 6
-    },
-    {
-      "name": "Sheryl",
-      "currency": "AOA",
-      "balance": 831516205.982434,
-      "user_id": 11,
-      "id": 7
-    },
-    {
-      "name": "VISA",
-      "currency": "BOB",
-      "balance": 2483.028218,
-      "user_id": 11,
-      "id": 8
-    },
-    {
-      "name": "Rich Man",
-      "currency": "USD",
-      "balance": 1e+27,
-      "user_id": 11,
-      "id": 9
     }
   ],
   "transactions": [
     {
-      "user_id": 10,
-      "wallet_id": 1,
-      "total": 11,
-      "category": "food",
-      "date": "2023-11-08",
+      "user_id": 1,
+      "wallet_id": "4",
+      "amount": "1200",
+      "category": "entertainment",
+      "date": "2023-11-25",
+      "wallet": {
+        "name": "Humo",
+        "balance": 120000
+      },
       "id": 1
     },
     {
       "user_id": 1,
       "wallet_id": "3",
-      "amount": "50000",
-      "category": "health",
-      "date": "2023-11-08",
+      "amount": "80000000",
+      "category": "entertainment",
+      "date": "2023-11-13",
       "wallet": {
-        "name": "Humo",
-        "balance": 99900
+        "name": "Visa",
+        "balance": 861002129.326691
       },
       "id": 2
     },
     {
-      "user_id": 11,
-      "wallet_id": "5",
-      "amount": "10",
+      "user_id": 1,
+      "wallet_id": "3",
+      "amount": "100000000",
       "category": "health",
-      "date": "",
+      "date": "2023-11-13",
       "wallet": {
-        "name": "das",
-        "balance": 23
+        "name": "Visa",
+        "balance": 781002129.326691
       },
       "id": 3
     },
     {
-      "user_id": 11,
-      "wallet_id": "6",
-      "amount": "10",
-      "category": "entertainment",
-      "date": "2023-11-09",
+      "user_id": 1,
+      "wallet_id": "3",
+      "amount": "50000000",
+      "category": "other",
+      "date": "2023-11-13",
       "wallet": {
-        "name": "Alex",
-        "balance": 45678
+        "name": "Visa",
+        "balance": 681002129.326691
       },
       "id": 4
     },
     {
-      "user_id": 11,
-      "wallet_id": "6",
-      "amount": "10",
-      "category": "food",
-      "date": "",
+      "user_id": 1,
+      "wallet_id": "3",
+      "amount": "500000000",
+      "category": "health",
+      "date": "2023-11-15",
       "wallet": {
-        "name": "Alex",
-        "balance": 45668
+        "name": "Visa",
+        "balance": 631002129.326691
       },
       "id": 5
     },
     {
-      "user_id": 11,
-      "wallet_id": null,
-      "total": null,
-      "category": "food",
-      "date": "2023-11-12",
+      "user_id": 1,
+      "wallet_id": "3",
+      "amount": "20000000",
+      "category": "health",
+      "date": "2023-11-13",
+      "wallet": {
+        "name": "Visa",
+        "balance": 131002129.32669103
+      },
       "id": 6
     },
     {
-      "user_id": 11,
-      "wallet_id": null,
-      "total": null,
-      "category": "health",
-      "date": "2023-11-12",
+      "user_id": 1,
+      "wallet_id": "3",
+      "amount": "",
+      "category": "food",
+      "date": "",
+      "wallet": {
+        "name": "Visa",
+        "balance": 16555.82714
+      },
       "id": 7
-    },
-    {
-      "user_id": 11,
-      "wallet_id": null,
-      "total": null,
-      "category": "food",
-      "date": "2023-11-12",
-      "id": 8
-    },
-    {
-      "user_id": 11,
-      "wallet_id": "7",
-      "amount": "10",
-      "category": "entertainment",
-      "date": "2023-11-13",
-      "wallet": {
-        "name": "Sheryl",
-        "balance": 92179676
-      },
-      "id": 9
-    },
-    {
-      "user_id": 11,
-      "wallet_id": "9",
-      "amount": "1000",
-      "category": "food",
-      "date": "2012-04-23",
-      "wallet": {
-        "name": "Rich Man",
-        "balance": 1e+27
-      },
-      "id": 10
-    },
-    {
-      "user_id": 11,
-      "wallet_id": null,
-      "total": null,
-      "category": "food",
-      "date": "2023-11-13",
-      "id": 11
-    },
-    {
-      "user_id": 11,
-      "wallet_id": null,
-      "total": null,
-      "category": "food",
-      "date": "2023-11-13",
-      "id": 12
-    },
-    {
-      "user_id": 11,
-      "wallet_id": null,
-      "total": null,
-      "category": "health",
-      "date": "2023-11-13",
-      "id": 13
     }
   ]
 }
