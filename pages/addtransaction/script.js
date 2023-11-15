@@ -4,6 +4,11 @@ import { user } from "../../modules/user";
 let wallets = []
 let form = document.forms.transactions
 let select = form.querySelector('select')
+let input = form.querySelector('#amount')
+
+// input.onkeyup = (e) => {
+//     input.value = parseFloat(input.value).toLocaleString('us-US')
+// }
 
 
 getData('/wallets?user_id=' + user.id)

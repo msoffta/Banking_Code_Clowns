@@ -53,6 +53,22 @@ function createChart(arr) {
 }
 
 function categoriesView(arr) {
+    let categ_items = [...new Set(arr.map(item => item.category))]
+    let rebuilt_arr = categ_items.map(item => {
+        return {
+            category: item,
+            total: 0
+        }
+    })
+
+    for(let transaction of arr) {
+        for(let new_item of rebuilt_arr) {
+            if(new_item.category === transaction.category) {
+                new_item.total += parseFloat(transaction.amount)
+            }
+        }
+    }
+    
     if(categ_chart) {
         categ_chart.destroy()
     }
@@ -60,10 +76,10 @@ function categoriesView(arr) {
     categ_chart = new Chart(categ_canvas, {
         type: 'bar',
         data: {
-            labels: arr.map(item => item.category),
+            labels: rebuilt_arr.map(item => item.category),
             datasets: [{
                 label: 'Acquisitions by year',
-                data: arr.map(item => item.amount),
+                data: rebuilt_arr.map(item => item.total),
             }]
         },
     });   

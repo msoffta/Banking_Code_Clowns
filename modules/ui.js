@@ -25,7 +25,7 @@ export function reload_card(massiv, cart) {
 
     h3.innerHTML = item.name;
     h4.innerHTML = item.currency;
-    p.innerHTML = `Balance: ${item.balance}`;
+    p.innerHTML = `Balance: ${parseFloat(item.balance).toLocaleString('us-US')}`;
 
     cart.append(article);
     article.append(h3, h4, p);
@@ -61,7 +61,7 @@ export async function reload_table(masiv, table) {
     th.innerHTML = item.id;
     th2.innerHTML = responce.data.name;
     p_car.innerHTML = categories[item.category];
-    th3.innerHTML = item.amount;
+    th3.innerHTML = parseFloat(item.amount).toLocaleString('us-US');
     date.innerHTML = item.date;
     th.classList.add("th");
     date.classList.add("th_date");

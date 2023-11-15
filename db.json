@@ -12,7 +12,7 @@
     {
       "name": "Visa",
       "currency": "UZS",
-      "balance": 111002129.32669103,
+      "balance": 31002129.32669103,
       "user_id": 1,
       "id": 3
     },
@@ -96,6 +96,42 @@
         "balance": 131002129.32669103
       },
       "id": 6
+    },
+    {
+      "user_id": 1,
+      "wallet_id": "3",
+      "amount": "10000000",
+      "category": "entertainment",
+      "date": "2023-10-13",
+      "wallet": {
+        "name": "Visa",
+        "balance": 111002129.32669103
+      },
+      "id": 7
+    },
+    {
+      "user_id": 1,
+      "wallet_id": "3",
+      "amount": "50000000",
+      "category": "other",
+      "date": "2023-11-15",
+      "wallet": {
+        "name": "Visa",
+        "balance": 101002129.32669103
+      },
+      "id": 8
+    },
+    {
+      "user_id": 1,
+      "wallet_id": "3",
+      "amount": "20000000",
+      "category": "other",
+      "date": "2023-11-15",
+      "wallet": {
+        "name": "Visa",
+        "balance": 51002129.32669103
+      },
+      "id": 9
     }
   ]
 }
