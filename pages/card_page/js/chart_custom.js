@@ -12,29 +12,14 @@ let categories = [];
 let myChart;
 let categ_chart;
 
-
 getData("/transactions?wallet_id=" + id).then((res) => {
     transactions = res.data;
     for (let item of res.data) {
         categories.push(item.category);
     }
     let newTransactions = JSON.parse(JSON.stringify(transactions));
-    const mergedTransactions = newTransactions.reduce((acc, transaction) => {
-        const existingTransaction = acc.find(
-            (item) => item.category === transaction.category
-        );
-        if (existingTransaction) {
-            existingTransaction.amount = `${
-                parseInt(existingTransaction.amount) +
-                parseInt(transaction.amount)
-            }`;
-        } else {
-            acc.push(transaction);
-        }
-        return acc;
-    }, []);
 
-    categoriesView(mergedTransactions);
+    categoriesView(filterData(newTransactions));
     createChart(transactions);
 });
 
@@ -47,22 +32,9 @@ today_btn.onclick = () => {
             todays_tr.push(item);
         }
     }
-    const mergedTransactions = todays_tr.reduce((acc, transaction) => {
-        const existingTransaction = acc.find(
-            (item) => item.category === transaction.category
-        );
-        if (existingTransaction) {
-            existingTransaction.amount = `${
-                parseInt(existingTransaction.amount) +
-                parseInt(transaction.amount)
-            }`;
-        } else {
-            acc.push(transaction);
-        }
-        return acc;
-    }, []);
+    let newTodays_tr = JSON.parse(JSON.stringify(todays_tr));
 
-    categoriesView(mergedTransactions);
+    categoriesView(filterData(newTodays_tr));
     createChart(todays_tr);
 };
 
@@ -72,31 +44,17 @@ week_btn.onclick = () => {
     date_now.setDate(date_now.getDate() + 7);
     date_now = date_now.getTime();
 
-    
     for (let item of transactions) {
         const itemDate = new Date(item.date).getTime();
+        console.log(date_now, itemDate);
 
-        if (itemDate >= date_now || itemDate <= date_now) {
+        if (itemDate <= date_now) {
             week_tr.push(item);
         }
     }
+    let newWeek_tr = JSON.parse(JSON.stringify(week_tr));
 
-    const mergedTransactions = week_tr.reduce((acc, transaction) => {
-        const existingTransaction = acc.find(
-            (item) => item.category === transaction.category
-        );
-        if (existingTransaction) {
-            existingTransaction.amount = `${
-                parseInt(existingTransaction.amount) +
-                parseInt(transaction.amount)
-            }`;
-        } else {
-            acc.push(transaction);
-        }
-        return acc;
-    }, []);
-
-    categoriesView(mergedTransactions);
+    categoriesView(filterData(newWeek_tr));
     createChart(week_tr);
 };
 
@@ -109,45 +67,37 @@ month_btn.onclick = () => {
     for (let item of transactions) {
         const itemDate = new Date(item.date).getTime();
 
-        if (itemDate >= date_now || itemDate <= date_now) {
+        if (itemDate <= date_now) {
             month_tr.push(item);
         }
     }
+    let newMonth_tr = JSON.parse(JSON.stringify(month_tr));
 
-    const mergedTransactions = month_tr.reduce((acc, transaction) => {
-        const existingTransaction = acc.find(
-            (item) => item.category === transaction.category
-        );
-        if (existingTransaction) {
-            existingTransaction.amount = `${
-                parseInt(existingTransaction.amount) +
-                parseInt(transaction.amount)
-            }`;
-        } else {
-            acc.push(transaction);
-        }
-        return acc;
-    }, []);
-
-    categoriesView(mergedTransactions);
+    categoriesView(filterData(newMonth_tr));
     createChart(month_tr);
 };
 
 year_btn.onclick = () => {
     let year_tr = [];
     let date_now = new Date();
-    date_now.setDate(date_now.getDate() + 30);
+    date_now.setDate(date_now.getDate() + 365);
     date_now = date_now.getTime();
 
     for (let item of transactions) {
         const itemDate = new Date(item.date).getTime();
 
-        if (itemDate >= date_now || itemDate <= date_now) {
+        if (itemDate <= date_now) {
             year_tr.push(item);
         }
     }
+    let newYear_tr = JSON.parse(JSON.stringify(year_tr));
 
-    const mergedTransactions = year_tr.reduce((acc, transaction) => {
+    categoriesView(filterData(newYear_tr));
+    createChart(year_tr);
+};
+
+function filterData(arr) {
+    const mergedTransactions = arr.reduce((acc, transaction) => {
         const existingTransaction = acc.find(
             (item) => item.category === transaction.category
         );
@@ -162,10 +112,8 @@ year_btn.onclick = () => {
         return acc;
     }, []);
 
-    categoriesView(mergedTransactions);
-    createChart(year_tr);
-};
-
+    return mergedTransactions;
+}
 
 function createChart(arr) {
     if (myChart) {
