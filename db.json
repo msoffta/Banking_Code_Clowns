@@ -1,101 +1,112 @@
 {
-  "users": [
-    {
-      "name": "jasur",
-      "surname": "gfdgdf",
-      "email": "jmukumzoda63@gmail.com",
-      "password": "12345rt",
-      "id": 1
-    }
-  ],
+  "users": [],
   "wallets": [
     {
-      "name": "Visa",
+      "name": "visa",
       "currency": "UZS",
-      "balance": 111002129.32669103,
-      "user_id": 1,
-      "id": 3
+      "balance": 100000,
+      "user_id": 11,
+      "id": 1
     },
     {
-      "name": "Humo",
-      "currency": "AZN",
-      "balance": 16.513059,
-      "user_id": 1,
-      "id": 4
+      "name": "visa",
+      "currency": "SOS",
+      "balance": 100000,
+      "user_id": 11,
+      "id": 2
+    },
+    {
+      "name": "humo",
+      "currency": "SBD",
+      "balance": 26178,
+      "user_id": 11,
+      "id": 3
     }
   ],
   "transactions": [
     {
-      "user_id": 1,
-      "wallet_id": "4",
+      "user_id": 11,
+      "wallet_id": "3",
       "amount": "1200",
       "category": "entertainment",
-      "date": "2023-11-25",
+      "date": "2023-11-17",
       "wallet": {
-        "name": "Humo",
-        "balance": 120000
+        "name": "humo",
+        "balance": 100000
       },
       "id": 1
     },
     {
-      "user_id": 1,
+      "user_id": 11,
       "wallet_id": "3",
-      "amount": "80000000",
+      "amount": "1200",
       "category": "entertainment",
-      "date": "2023-11-13",
+      "date": "2023-11-09",
       "wallet": {
-        "name": "Visa",
-        "balance": 861002129.326691
+        "name": "humo",
+        "balance": 98800
       },
       "id": 2
     },
     {
-      "user_id": 1,
+      "user_id": 11,
       "wallet_id": "3",
-      "amount": "100000000",
-      "category": "health",
-      "date": "2023-11-13",
+      "amount": "30000",
+      "category": "entertainment",
+      "date": "2023-11-09",
       "wallet": {
-        "name": "Visa",
-        "balance": 781002129.326691
+        "name": "humo",
+        "balance": 97600
       },
       "id": 3
     },
     {
-      "user_id": 1,
+      "user_id": 11,
       "wallet_id": "3",
-      "amount": "50000000",
-      "category": "other",
-      "date": "2023-11-13",
+      "amount": "200",
+      "category": "entertainment",
+      "date": "2023-10-14",
       "wallet": {
-        "name": "Visa",
-        "balance": 681002129.326691
+        "name": "humo",
+        "balance": 67600
       },
       "id": 4
     },
     {
-      "user_id": 1,
+      "user_id": 11,
       "wallet_id": "3",
-      "amount": "500000000",
-      "category": "health",
+      "amount": "20000",
+      "category": "entertainment",
       "date": "2023-11-15",
       "wallet": {
-        "name": "Visa",
-        "balance": 631002129.326691
+        "name": "humo",
+        "balance": 67400
       },
       "id": 5
     },
     {
-      "user_id": 1,
+      "user_id": 11,
       "wallet_id": "3",
-      "amount": "20000000",
-      "category": "health",
-      "date": "2023-11-13",
+      "amount": "20000",
+      "category": "entertainment",
+      "date": "2023-11-07",
       "wallet": {
-        "name": "Visa",
-        "balance": 131002129.32669103
+        "name": "humo",
+        "balance": 47400
       },
       "id": 6
+    },
+    {
+      "user_id": 11,
+      "wallet_id": "3",
+      "amount": "1222",
+      "category": "health",
+      "date": "2023-11-16",
+      "wallet": {
+        "name": "humo",
+        "balance": 27400
+      },
+      "id": 7
     }
   ]
 }
