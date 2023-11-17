@@ -2,17 +2,17 @@
     display: inline-block;
     position: relative;
     width: 80px;
-    height: 80px;
+    height: 100%;
 }
 
 .lds-ellipsis div {
     position: absolute;
-    top: 20px;
+    top: 40%;
     transform: translateY(-50%);
     width: 13px;
     height: 13px;
     border-radius: 50%;
-    background: #000;
+    background: blue;
     animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
 

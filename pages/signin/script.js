@@ -36,7 +36,7 @@ signin.onsubmit = (e) => {
             if(res.data[0].password === user.password) {
                 alert('welcome')
                 localStorage.setItem('user' , JSON.stringify(res.data[0]))
-                location.assign('/index.html')
+                location.assign('/')
 
             } else {
                 alert('wrong password')

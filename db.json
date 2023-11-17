@@ -6,13 +6,34 @@
       "email": "jmukumzoda63@gmail.com",
       "password": "12345rt",
       "id": 1
+    },
+    {
+      "email": "dewadc@gmail.com",
+      "name": "Visa",
+      "surname": "VIsaaa",
+      "password": "12345rt",
+      "id": 2
+    },
+    {
+      "email": "dewadcf@gmail.com",
+      "name": "Visa",
+      "surname": "sadas",
+      "password": "12345",
+      "id": 3
+    },
+    {
+      "name": "Visa",
+      "surname": "Humo",
+      "email": "jmukumzoda@gmail.com",
+      "password": "12345rt",
+      "id": 4
     }
   ],
   "wallets": [
     {
       "name": "Visa",
       "currency": "UZS",
-      "balance": 111002129.32669103,
+      "balance": 108109907.32669103,
       "user_id": 1,
       "id": 3
     },
@@ -22,80 +43,63 @@
       "balance": 16.513059,
       "user_id": 1,
       "id": 4
+    },
+    {
+      "user_id": 3,
+      "currency": "RUB",
+      "name": "Visa",
+      "balance": "120000",
+      "id": 5
     }
   ],
   "transactions": [
     {
       "user_id": 1,
-      "wallet_id": "4",
-      "amount": "1200",
-      "category": "entertainment",
-      "date": "2023-11-25",
+      "wallet_id": "3",
+      "amount": "120000",
+      "category": "health",
+      "date": "",
       "wallet": {
-        "name": "Humo",
-        "balance": 120000
+        "name": "Visa",
+        "balance": 110882129.32669103
       },
       "id": 1
     },
     {
       "user_id": 1,
       "wallet_id": "3",
-      "amount": "80000000",
-      "category": "entertainment",
-      "date": "2023-11-13",
+      "amount": "122222",
+      "category": "health",
+      "date": "",
       "wallet": {
         "name": "Visa",
-        "balance": 861002129.326691
+        "balance": 110632129.32669103
       },
       "id": 2
     },
     {
       "user_id": 1,
       "wallet_id": "3",
-      "amount": "100000000",
-      "category": "health",
-      "date": "2023-11-13",
+      "amount": "1200000",
+      "category": "entertainment",
+      "date": "2023-11-15",
       "wallet": {
         "name": "Visa",
-        "balance": 781002129.326691
+        "balance": 110509907.32669103
       },
       "id": 3
     },
     {
       "user_id": 1,
       "wallet_id": "3",
-      "amount": "50000000",
+      "amount": "1200000",
       "category": "other",
-      "date": "2023-11-13",
-      "wallet": {
-        "name": "Visa",
-        "balance": 681002129.326691
-      },
-      "id": 4
-    },
-    {
-      "user_id": 1,
-      "wallet_id": "3",
-      "amount": "500000000",
-      "category": "health",
       "date": "2023-11-15",
       "wallet": {
         "name": "Visa",
-        "balance": 631002129.326691
+        "balance": 109309907.32669103
       },
-      "id": 5
-    },
-    {
-      "user_id": 1,
-      "wallet_id": "3",
-      "amount": "20000000",
-      "category": "health",
-      "date": "2023-11-13",
-      "wallet": {
-        "name": "Visa",
-        "balance": 131002129.32669103
-      },
-      "id": 6
+      "id": 4
     }
   ]
 }

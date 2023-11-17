@@ -9,13 +9,16 @@ let cards = document.querySelectorAll('.card');
 let select = document.querySelector('#convert_form select')
 let btn = document.querySelector('#convert_form button')
 let id = location.search.split('=').at(-1)
-// let loader = document.querySelector('')
 let wallet = null
-
-
 export let card_name = document.querySelector(".card_name");
 export let card_balance = document.querySelector(".card_balance");
-
+let active = document.querySelectorAll(".li");
+active.forEach(e => {
+    e.onmouseenter = () => {
+        active.forEach(el => el.classList.remove('today'))
+        e.classList.add('today')
+    }
+})
 VanillaTilt.init(cards, {
     max: 40,  // Максимальный угол поворота карточки
     glare: true,  // Включаем эффект блика
@@ -86,5 +89,5 @@ getData('/wallets/' + id)
         card_balance.innerHTML = `Balance: ${res.data.balance.toLocaleString('ru-RU')} ${res.data.currency}`
     })
 
-    let user_emails = document.querySelector('[data-email]')
-    user_emails.innerHTML = user.email
+let user_emails = document.querySelector('[data-email]')
+user_emails.innerHTML = user.email
