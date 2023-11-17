@@ -18,7 +18,7 @@ form input {
     height: 60px;
     width: 440px;
     border-radius: 10px;
-    border: 2px solid black;
+    border: 1px solid black;
     padding: 5px 10px;
     font-size: 18px;
     color: black;
@@ -83,5 +83,3 @@ a {
     box-shadow: 0 0 15px rgb(173, 3, 3);
     
 }
-
-

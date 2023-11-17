@@ -1,16 +1,23 @@
-import axios from "axios";          
-    
-const signin = document.forms.signin;
+import axios from 'axios'
+import { getData } from '../../modules/helpers';
+
+let signin = document.forms.signin;
 const baseUrl = "http://localhost:8080";
 
+// async function checkData(url, { email, password }) {
+//     const responce = await fetch(url);
 
-axios.get(baseUrl + "/users")
-.then(res => res.json())
-.then(res => console.log(res))
+//     if (responce.ok) {
+//         let data = await responce.json();
+//         let result = data.filter((item) => {
+//             return item.email === email && item.password === password;
+//         });
 
+//         return result[0]
+//     }
+// }
 
-
-signin.onsubmit = function (e) {
+signin.onsubmit = (e) => {
     e.preventDefault();
     let data = new FormData(signin);
     let user = {
@@ -18,16 +25,25 @@ signin.onsubmit = function (e) {
         password: data.get("password"),
     }
 
-    axios.get("baseUrl" + "/users?email=" + user.email)
+    getData("/users?email=" + user.email)
     .then(res => {
-        if(res.status !== 201 || res.status !== 200) {
-        if(res.data.length > 0) {
+        if (res.status === 200 || res.status === 201) {
+            if (res.data.length === 0) {
+                alert('user not found')
+                return
+            }
 
+            if(res.data[0].password === user.password) {
+                alert('welcome')
+                localStorage.setItem('user' , JSON.stringify(res.data[0]))
+                location.assign('/index.html')
+
+            } else {
+                alert('wrong password')
+            }
         }
-    }
-    }) 
-    
-    
+        
+    })
 
-      
-}
+
+};

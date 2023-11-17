@@ -1,65 +1,19 @@
+// import axios from 'axios'
 import { reload_card, makeHeader } from "../../modules/ui"
-
-let arr = [
-    {
-        id: 1,
-        cart_name: "Visa",
-        cart_amount: "Rub",
-        cart_Category: "Car",
-        cart_Transaction_amount: "414,000,000",
-        cart_time: "4 days ago",
-    },
-    {
-        id: 2,
-        cart_name: "Visa",
-        cart_amount: "Rub",
-        cart_Category: "Car",
-        cart_Transaction_amount: "414,000,000",
-        cart_time: "4 days ago",
-    }, {
-        id: 3,
-        cart_name: "Visa",
-        cart_amount: "Rub",
-        cart_Category: "Car",
-        cart_Transaction_amount: "414,000,000",
-        cart_time: "4 days ago",
-    },
-    {
-        id: 4,
-        cart_name: "Visa",
-        cart_amount: "Rub",
-        cart_Category: "Car",
-        cart_Transaction_amount: "414,000,000",
-        cart_time: "4 days ago",
-    },
-    {
-        id: 5,
-        cart_name: "Visa",
-        cart_amount: "Rub",
-        cart_Category: "Car",
-        cart_Transaction_amount: "414,000,000",
-        cart_time: "4 days ago",
-    },
-    {
-        id: 6,
-        cart_name: "Visa",
-        cart_amount: "Rub",
-        cart_Category: "Car",
-        cart_Transaction_amount: "414,000,000",
-        cart_time: "4 days ago",
-    },
-    {
-        id: 7,
-        cart_name: "Visa",
-        cart_amount: "Rub",
-        cart_Category: "Car",
-        cart_Transaction_amount: "414,000,000",
-        cart_time: "4 days ago",
-    },
-    
-]
+import { getData } from '../../modules/helpers';
+import { user } from "../../modules/user";
 
 let container = document.querySelector('.cart')
 
-reload_card(arr, container)
 makeHeader()
+
+// 
+let user_emails = document.querySelectorAll('[data-email]')
+
+user_emails.forEach(a => a.innerHTML = user.email)
+// 
+
+
+getData('/wallets?user_id=' + user.id)
+    .then(res => reload_card(res.data, container))
+
